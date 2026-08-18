@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2543",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 해외에 살지만 한국에 집 주소가 남아 있는데 거주성확인서에 제가 어느 항목을 표시해야 하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_2506",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "담보보험을 제가 못 들어 신보가 대신 보험을 들면 보험금을 제가 직접 받을 권한이 제한되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "담보",
+      "value": "담보물에 대하여 신보가 지정하는 종류와 금액의 보험에 가입",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "담보",
+      "value": "보험금 청구권에 신보를 위하여 질권을 설정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "담보",
+      "value": "본인이 보험가입을 이행하지 아니할 때에는 신보가 보험료를 대신 지급하고 보험계약을 계속하거나 필요하다고 인정하는 보험계약을 새로이 체결",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

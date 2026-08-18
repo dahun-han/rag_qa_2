@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1513",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "내부직원",
+  "difficulty": "normal",
+  "question": "약정서에 고객이 서명 대신 도장만 찍었고 보증인 쪽에 주소 변경이 있었던 것 같을 때 보증기관이 보증을 이행하면 누구의 주소로 서면통지해야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "약정서 확인",
+      "value": "“약정서 설명듣고, 사본 받았음” 란에 서명 또는 날인",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "서면 통지",
+      "value": "본인과 연대보증인이 신고한 최종 주소로 서면 통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "서면 통지",
+      "value": "주민등록초본·법인등기부등본 확인 결과 이전 사실이 명백한 경우 새로운 주소로 통지",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

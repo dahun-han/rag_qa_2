@@ -1,0 +1,84 @@
+{
+  "item_id": "QA_3507",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 보증을 선 회사에서 대표가 사임하면 신용보증기금이 어떤 조치를 할 수 있나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "경영권 변동",
+      "value": "약정인이 대표자 사임",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "책임경영의무 위반 시 조치",
+      "value": "형사상의 법적 조치",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "책임경영의무 위반 시 조치",
+      "value": "약정인에 대한 손해배상 청구",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "책임경영의무 위반 시 조치",
+      "value": "보증기업에 대한 사전구상권 행사",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "책임경영의무 위반 시 조치",
+      "value": "보증기업에 대한 신용보증 기한이익상실 (주채권자에 대한 기한이익상실 통지 포함)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "책임경영의무 위반 시 조치",
+      "value": "보증기업에 대한 신용보증 해지 및 회수",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "책임경영의무 위반 시 조치",
+      "value": "약정인 및 보증기업에 대한 신규보증 금지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "중대성 판단 시 조치",
+      "value": "3 년 이내 신보가 정한 기간에 보증 분할해지. 단, 제 7 조의 기간 이내 운용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "중대성 판단 시 조치",
+      "value": "보증료율 최대 1%p 가산",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N10",
+      "key": "중대성 판단 시 조치",
+      "value": "신규보증 금지",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

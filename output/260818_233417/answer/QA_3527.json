@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_3527",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "신한 첫급여 드림 적금을 만기 전에 해지하면 입금 건별로 입금일부터 해지일까지 산정하는 이자 계산식에 표의 구간별 깎임 비율을 어떻게 반영하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "이자 산출 근거",
+      "value": "입금건별로 입금일부터 해지일 전일까지 기간(예치일수)에 대하여 이자율로 계산",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "중도해지 차감율",
+      "value": "1개월이상 80%, 3개월이상 70%, 6개월이상 30%, 9개월이상 20%, 11개월이상 10%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "이자 계산식",
+      "value": "1회차 입금액 x 이자율 x 예치일수/계약기간",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "우대이자율",
+      "value": "계약기간 만기전 중도해지한 계좌에 대해서는 적용하지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "일부해지",
+      "value": "일부해지금액의 이자는 선입선출법에 따라 중도해지이자율로 지급",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_2535",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 배우자 이름으로 된 외화정기예금을 제 외화보통예금에 연결하려고 하는데 예금주 이름이 다르면 어떻게 처리되나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "계좌 범위",
+      "value": "외화보통예금, 외화당좌예금, 외화정기예금, Multiple 외화정기예금",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "명의·인감·서명 요건",
+      "value": "명의, 인감, 서명 동일",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "계좌간 이체 제한",
+      "value": "본인명의의 계좌에서 본인명의의 다른 계좌로 이체",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "계좌 연결",
+      "value": "외화정기예금 및 Multiple 외화정기예금을 연결하여 거래",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "계좌간 이체 신청",
+      "value": "예금주가 별도로 신청",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}

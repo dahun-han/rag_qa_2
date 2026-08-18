@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_2539",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 모르는 사람에게 송금했다가 사기 의심돼 머니그램 고객서비스에 신고하려고 해요, 신고 과정에서 제 거래정보가 해외로 전송될 수 있는 상황이면 환급은 어떤 조건에서 가능한가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "자료 활용",
+      "value": "송금인과 수취인의 개인 정보를 수집, 이용, 공개 및 전송 (국가 간 전송 포함)에 동의",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "환급",
+      "value": "송금이 처리되고 90일이 경과하고 수취인에게 지급이 되지 않은 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "환급",
+      "value": "은행계좌에 이체가 되어야 하는데 계좌를 보유한 금융기관이 인수하지 않는 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "환급",
+      "value": "if the transfer has been declined due to incompliance with MoneyGram ’ s policy (refundable only)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "환급",
+      "value": "There shall be no right to a refund if sender provides any incorrect information",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "환급",
+      "value": "if the Transfer was directed to an account and the transfer amount has been accepted by the Financial Institution",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "환급",
+      "value": "All refund requests must be accompanied by a copy of the original send form",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "환급",
+      "value": "All refund requests will be subject to MoneyGram ’ s review and discretion, and will normally be processed within 30 days of receipt of a valid request",
+      "type": "numeric",
+      "vital": true
+    }
+  ]
+}

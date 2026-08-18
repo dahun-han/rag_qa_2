@@ -1,0 +1,105 @@
+{
+  "item_id": "QA_3513",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 전자채권을 담보로 대출받으려 하는데 이 대출의 목적 때문에 은행이 요구하는 절차나 제출서류는 어떤 순서로 진행되는 건가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "업무처리 기본절차",
+      "value": "갑의 홈페이지에 게시",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "업무처리 기본절차",
+      "value": "게시된 전자채권의 내역을 조회하여 확인",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "업무처리 기본절차",
+      "value": "전자서명법 소정의 공인인증기관이 발급한 인정서로 전자서명",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "업무처리 기본절차",
+      "value": "갑이 정한 기재사항과 세금계산서를 등록하여 전자채권을 양도신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "업무처리 기본절차",
+      "value": "전산장애 시 소정의 양식에 기재하여 영업점에 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "업무처리 기본절차",
+      "value": "전산원장에 정상적으로 등록됨과 동시에 채권양수도계약이 성립",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "양도통지 및 게시",
+      "value": "양도통지권한을 갑에게 위임",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "양도통지 및 게시",
+      "value": "양도통지를 완료한 후 대출 가능 여부 등을 갑의 홈페이지에 게시",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "대출 신청 및 집행",
+      "value": "별도의 여신거래약정 체결",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N10",
+      "key": "대출 신청 및 집행",
+      "value": "제1항 제2호를 준용한 전자서명의 방법으로 담보대출을 신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N11",
+      "key": "대출 신청 및 집행",
+      "value": "여신거래약정과 일치하는 경우 지정된 을의 계좌에 입금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N12",
+      "key": "서류제출 및 위반효과",
+      "value": "공급계약서·주문서 등의 사본을 지체없이 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N13",
+      "key": "서류제출 및 위반효과",
+      "value": "진술 허위 또는 사본제출의무 위반 시 담보대출의 기한의 이익을 상실하며 변제",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

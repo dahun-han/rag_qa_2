@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_2515",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "추가 약정서 사본을 받아 서명란에 제 이름 적고 서명했는데 이게 사본을 받았고 주요 내용을 들었다는 표시인지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "확인 문구 및 서명",
+      "value": "좌하단 점선 박스에 ‘이 추가약정서 사본을 확실히 수령하고, 주요내용에 하여 설명을 듣고 이해하였음. 본인(겸 담보제공자): (인)’ 문구와 서명란",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "확인 문구 및 서명",
+      "value": "이 추가약정서 사본을 확실히 수령하고, 주요내용에 하여 설명을 듣고 이해하였음",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3526",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "결제예정일까지 맡긴 돈이 전액 예치되지 않으면 은행이 절차를 멈춘다길래 그럴 때 결제일을 연기하려면 먼저 중개업체에 어떤 요청을 해야 하나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "변경처리절차",
+      "value": "MP에 의뢰",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "변경처리절차",
+      "value": "MP의 승인 및 MP의 '은행'에 대한 통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "서비스 진행",
+      "value": "'계약변경' 미이행 시 '서비스' 절차 중단",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "변경처리절차",
+      "value": "'판매기업'과 '구매기업'의 '은행'에 대한 승인",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

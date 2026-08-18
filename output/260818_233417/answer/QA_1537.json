@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1537",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "외화 매입한 뒤 위조로 확인되고 거래 상대 은행이 반환을 요구하면 어떤 경우에 은행이 실물을 돌려줘야 하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "반환",
+      "value": "신청인이 제1항 각호의 금액을 지급하는 경우 은행은 외화수표 등 의 실물을 신청인에게 반환",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "반환",
+      "value": "관계기관 등에 의해 몰수되거나, 사고재발 가능성 등 은행이 필요하다고 인정하는 상당한 사유가 있는 경우 은행은 위·변조 통화를 신청인에게 반환하지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "반환",
+      "value": "환거래은행이 외화수표 등 의 실물을 분실한 경우 등 은행의 책임없는 사유로 반환이 불가능한 경우 은행의 반환의무 면제",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

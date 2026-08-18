@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3520",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 신용보증기금 동의 없이 보증기업 대표에서 물러나면 신분상 불이익뿐 아니라 개인적으로 금전적 손해를 배상해야 하는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3546",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "ZERO 팩토링에서 인터넷뱅킹 같은 온라인 전송 방식은 어떤 범위를 포함하나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

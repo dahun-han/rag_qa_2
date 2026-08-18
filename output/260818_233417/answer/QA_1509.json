@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1509",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "내부직원",
+  "difficulty": "easy",
+  "question": "화재로 큰 손해를 보고 영업 목적을 바꾸려는 회사가 다른 채무도 일부 못 갚고 있는 상황이면, 이런 경우에 어떤 규제 사유들이 적용되는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출약정서의 규제 사유",
+      "value": "화재 등 차주에게 막대한 손해가 발생한 때",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대출약정서의 규제 사유",
+      "value": "영업목적의 변경",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "대출약정서의 규제 사유",
+      "value": "대주에 대한 수개의 채무 중 하나라도 기한에 변제하지 아니한 때",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

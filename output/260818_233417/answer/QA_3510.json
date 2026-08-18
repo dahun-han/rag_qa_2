@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3510",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 임대차계약을 새로 해서 세대원에게 전세대출을 인수시키려는데 세대원이 제공한 담보 가치가 떨어지면 은행이 금리를 올리거나 바로 갚으라고 하는 조치를 할 수 있는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "담보 규정",
+      "value": "본인이 담보로 제공한 담보물의 담보가치가 감소",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "자산기준 관련 조치",
+      "value": "자산기준 초과 시 가산금리 또는 금리 변경 적용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "자산기준 관련 조치",
+      "value": "일정 금액 초과 시 기한이익상실 처리",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "사실확인 절차",
+      "value": "은행의 청구 시 사실확인에 필요한 서류 곧 제출",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

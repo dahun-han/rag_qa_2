@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3512",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 약국을 운영하는데 건강보험에서 나올 치료비 청구권이 이미 다른 사람에게 양도되거나 압류돼 있으면 이 약국전용 구매자금대출의 담보가 안 되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출 요건",
+      "value": "건강보험급여 청구채권을 제3자에게 양도한 사실이 없고",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대출 요건",
+      "value": "압류 또는 가압류되는 등 권리제한 사유가 없음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "대출 절차",
+      "value": "이 사실을 제3조 제1항에 의하여 확인한 이후에 거래",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "진술·보증 위반 시 조치",
+      "value": "그 즉시 은행에 그에 상당하는 대체 담보를 제공하거나 대출금을 상환",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

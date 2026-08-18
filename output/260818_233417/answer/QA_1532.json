@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1532",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "은행이 자동이체 약관을 인터넷과 영업점에 게시해 놓기만 해도 출금일과 입금일 설명 의무를 다한 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

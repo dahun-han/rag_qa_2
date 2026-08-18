@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_3515",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "중소기업 고금리 대출 중도에 갚을 때 위약금 적용 대상?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "문서 정보",
+      "value": "추가약정서 (대출이자율 연 5% 초과 대출 중소기업 금융지원 약정용)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "문서 정보",
+      "value": "제4조 중도상환해약금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "문서 정보",
+      "value": "(2026.01.30 제정)",
+      "type": "text",
+      "vital": false
+    },
+    {
+      "id": "N4",
+      "key": "문서 정보",
+      "value": "(4-204-0428)",
+      "type": "text",
+      "vital": false
+    },
+    {
+      "id": "N5",
+      "key": "문서 정보",
+      "value": "[TABLE]",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}

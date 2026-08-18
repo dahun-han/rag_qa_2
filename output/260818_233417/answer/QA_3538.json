@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_3538",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 새로 수출을 시작해 실적이 11개월인데, 한도는 지금 실적을 연간 환산할지 아니면 앞으로 예상실적을 반영할지 어떻게 결정되는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "실적 환산",
+      "value": "과거 실적 등 이 1 년 미만인 경우에는 1 년으로 환산한 실적",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "실적 환산",
+      "value": "예 : 전월로부터 7 개월 실적 X 12/7",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "실적 보유기간·신규업체",
+      "value": "실적 보유기간이 6 개월 미만인 업체 및 신규업체는 기존실적 + 향후예상실적(기존실적포함 12 개월 범위내)으로 산출 가능",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "한도 산정 유의사항",
+      "value": "과다 한도산정방지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "한도 산정 유의사항",
+      "value": "예상실적의 타당성 검토",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

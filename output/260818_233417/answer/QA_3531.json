@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3531",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 가맹점이라 제휴 가상계좌를 도입하려는데 거래 내역을 중간에서 전달해 주는 기관이 정확히 무슨 역할을 하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

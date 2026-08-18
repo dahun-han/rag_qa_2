@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_3509",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "내부직원",
+  "difficulty": "easy",
+  "question": "처분 및 평가 손익 정산표에서 맨 왼쪽 두 칸 비중을 합친 뒤 나머지 반복된 10%, 20%, 15% 비율은 고정으로 적용되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "표 제목",
+      "value": "처분(평가)손익 정산표",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "표 구성",
+      "value": "30% 20%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "표 구성",
+      "value": "28% 18%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "표 구성",
+      "value": "26% 15%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "표 구성",
+      "value": "24% 15%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "표 구성",
+      "value": "22% 15%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "표 구성",
+      "value": "20% 15%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "표 구성",
+      "value": "10% 20% 15%",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

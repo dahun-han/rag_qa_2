@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_2505",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "대출이동 신청 도중 통신장애로 처리가 실패했고 안내를 못 받아 불리한 상황이에요, 이런 경우 은행의 즉시 통지 의무를 근거로 제가 문제 삼을 수 있는 점은 뭐가 있나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "장애 시 처리",
+      "value": "이용채널을 통해 고객에게 이를 즉시 통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "손해배상",
+      "value": "고객이 정상적으로 서비스를 신청하였음에도 불구하고, 신규기관의 고의 또는 과실로 고객에게 손해가 발생한 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "손해배상",
+      "value": "신규기관이 고객의 고의 또는 과실이 있었음을 증명하거나 보유기관 또는 금융결제원의 고의 또는 과실로 손해가 발생한 경우",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

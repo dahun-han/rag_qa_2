@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_2507",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "인터넷으로 결제승인했는데 시간이 18시 넘어서 18:30이라 신청이 안 된다고 나오는데요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "건별대출 신청",
+      "value": "전용단말기 또는 인터넷 뱅킹을 통한 전자적인 방법",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "건별대출 신청",
+      "value": "도달된 날로부터 7일(도달일을 포함한다) 18:00 이내",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

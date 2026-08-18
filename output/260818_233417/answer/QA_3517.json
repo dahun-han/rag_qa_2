@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3517",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "전입 유예 추가약정서를 쓰러 왔는데 창구에서 설명이 짧아요, 이런 경우 제가 꼭 받아야 하는 사본이 뭐죠",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

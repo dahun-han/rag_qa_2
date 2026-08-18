@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1530",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 설명을 잘 못 알아듣고 실수로 청년 처음적금 설명서에 이해했다며 서명했으면 나중에 문제 생겨도 은행에 해결을 요구하기 어려운가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

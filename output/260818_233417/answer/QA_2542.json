@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2542",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "구매기업으로 주문하면 결제가 승인되는 조건이 장터가 정보를 은행에 보내는 것인지 궁금하네",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

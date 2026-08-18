@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_2527",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 개인사업자인데 이 상품이 만 18세 이상 개인과 개인사업자 대상이라면 가입할 때 1인 1계좌 제한 같은 제약이 어떤 게 있는지 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입 자격",
+      "value": "만 18세 이상 실명의 개인 및 개인사업자",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입 및 보유 제한",
+      "value": "1인 1계좌에 한하여 가입",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "가입 및 보유 제한",
+      "value": "공동명의는 불가",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "양도 및 담보",
+      "value": "은행의 승낙을 받은 경우에 한하여 담보제공",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "계약 기간",
+      "value": "계약기간 12개월",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "금액 요건",
+      "value": "최소 가입 가능 금액 1천원 이상",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "금액 요건",
+      "value": "저축한도 월 30만원 이하",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "해지",
+      "value": "만기일 전 영업일까지 2회에 한하여 일부 해지 가능",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

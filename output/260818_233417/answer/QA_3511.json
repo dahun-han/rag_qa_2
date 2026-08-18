@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_3511",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 전세금 대신 생활비로 이 대출을 썼다면 은행이 대출 만기를 앞당기거나 바로 갚으라고 할 수 있는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "용도 제한",
+      "value": "임차보증금 반환 용도 외 사용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기한전 변제 사유",
+      "value": "기한의 이익 상실 및 즉시 변제의무",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

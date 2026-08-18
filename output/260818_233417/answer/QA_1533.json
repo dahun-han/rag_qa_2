@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1533",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "한국주택금융공사 보증약정을 인터넷으로 체결했는데 이때 어떤 전자약관들이 적용되는지 좀 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

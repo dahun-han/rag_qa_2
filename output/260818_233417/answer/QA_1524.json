@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_1524",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 부모인데 자녀 명의로 이 자유적립식 적금 가입하려고 해요, 1인당 계좌 하나 제한과 월 저축한도 20만원을 고려하면 우대이자 받으려면 제가 뭘 어떻게 해야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "계좌·상품",
+      "value": "1인 1계좌",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "계좌·상품",
+      "value": "자유적립식",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "저축 한도",
+      "value": "월 20만원 이하 (재예치 원금과 이자 제외)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "우대이자 요건",
+      "value": "신한 아이행복카드 결제계좌를 신한은행으로 지정 한 고객의 자녀가 이 적금을 가입할 경우 (연 0.5%)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "우대이자 요건",
+      "value": "이 적금 가입 전 ‘주택청약종합저축’ 신규(보유)한 경우 (연 0.3%)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "우대이자 요건",
+      "value": "최고 (연 0.8%)",
+      "type": "numeric",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_1526",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "자유적립식 적금이 만기 때 제가 만기 시점에 10세여서 자동 연장 대상에서 제외됐고 가입할 때 우대금리가 붙어 있었는데, 만기일부터 지급 전날까지 어떤 이율이 적용되는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "상품 유형",
+      "value": "자유적립식",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "재예치 적용",
+      "value": "최종 계약 만기일로부터 지급 전날까지의 기간",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "재예치 적용",
+      "value": "제14조 만기 후 이자율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "재예치 제외",
+      "value": "재예치 시점의 가입고객 연령이 만6세 이상",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "이자율",
+      "value": "우대이자율, 최고 (연 0.8%)",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}

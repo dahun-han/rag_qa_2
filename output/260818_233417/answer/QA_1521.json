@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_1521",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 개인이고 우리 모임이 120명인데 SOL 모임적금 가입 대상이 되는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입대상",
+      "value": "모임장을 포함한 모임원이 2인 이상 100인 이하로 구성된 모임의 모임장",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입대상",
+      "value": "만 17세 이상 실명의 개인 및 개인사업자",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

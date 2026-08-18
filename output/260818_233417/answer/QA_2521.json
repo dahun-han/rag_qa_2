@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2521",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 납품한 회사에 대한 받을 돈을 신한 동반성장론으로 은행에 넘기면 적용되는 주요 약관들 좀 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

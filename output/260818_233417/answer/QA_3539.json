@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_3539",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 120,000달러로 외화 MMDA 가입해뒀는데 하루 끝 잔액이 99,000달러가 되면 어떤 구간의 연 이율을 적용하는지 좀 알려주실래요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "이자 적용 기준",
+      "value": "매일의 최종잔액이 미화 10만불 또는 그 상당액 미만",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기본 이자율",
+      "value": "10만불 미만 연 이율 0.01000",
+      "type": "numeric",
+      "vital": true
+    }
+  ]
+}

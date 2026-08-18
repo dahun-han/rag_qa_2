@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1518",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "채권의 원리금 지급을 은행에 맡기려 하는데 은행에 꼭 알려줘야 하는 항목들이 뭔지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

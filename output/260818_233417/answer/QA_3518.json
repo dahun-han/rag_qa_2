@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3518",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 같이 책임지는 보증인인데 약정서에는 약속대로 지킨다고만 적혀 있어요, 이게 실제로 제가 모든 빚을 대신 갚아야 한다는 뜻인지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1535",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "자동이체가 세 번째 연속으로 입금이 안 됐다고 안내받았는데 이럴 때 계좌를 바꾸거나 해지하려면 은행에 언제까지 알려야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "해지·변경 신청 절차",
+      "value": "이체지정일 전 영업일까지 은행에 신고",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

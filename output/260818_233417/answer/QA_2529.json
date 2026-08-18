@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2529",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "eFX 서비스 등록 문서에서 고객이 제출하는 등록 정보와 시스템에 들어가는 값은 어떻게 구분돼 있나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

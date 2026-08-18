@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3519",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "약정서랑 가계대출 관련 약관 사본을 받으면 우선적으로 어떤 항목들을 확인해야 하는지 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

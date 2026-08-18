@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2540",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 계좌번호 모르는 사람에게 보내면 신한 쏠빠른으로 웨스턴유니온 취급점에서 바로 현금 수령이 가능한가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

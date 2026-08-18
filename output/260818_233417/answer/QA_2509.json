@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_2509",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 전세로 살던 집을 다른 사람에게 재임대해 놨는데 집주인이 파산하면 전세지킴보증으로 보증금 반환 청구하려면 어떤 절차를 밟아야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "보증 책임 범위",
+      "value": "임대차목적물을 제3자에게 전대한 경우에는 대항력 유무와 상관없이 공사는 보증책임을 부담하지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "보증채무이행 절차",
+      "value": "임대차계약서 원본을 공사에 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "보증채무이행 절차",
+      "value": "공사와 임대차보증금 반환채권에 대한 채권양도계약을 체결",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "임차인의 권리행사",
+      "value": "배당요구, 채권신고 등 의 방법으로 임대차보증금반환채권을 보전 또는 행사",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

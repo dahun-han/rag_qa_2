@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_3523",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 같은 이름으로 이미 은행에 다른 정기적금이 있어서 창구에서 가입이 안 됐는데, 이런 상황에서도 첫급여 드림 적금을 새로 만들 수 있는지 좀 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입대상",
+      "value": "실명의 개인 및 개인사업자",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입대상",
+      "value": "1인 1계좌",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_3506",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "사업계획서는 신청할 때 제출했는데 사업자등록증을 대출 취급일로부터 2개월 안에 못 제출하면 어떤 불이익이 있는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "사업자등록증 제출 및 연장",
+      "value": "대출취급일로부터 2개월 이내 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "사업자등록증 제출 및 연장",
+      "value": "제출기간 만료 전에 연장 청구",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "사업자등록증 제출 및 연장",
+      "value": "심사를 거쳐 대출취급일로부터 최장 4개월까지 연장",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "금리 조정",
+      "value": "연장시점부터 여신금리에 (1.5%p) 가산 적용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "금리 조정",
+      "value": "연장제출일자 내 제출 시 가산금리 인하 요청 가능 및 특별한 사유 없는 한 수용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "기한의 이익 상실",
+      "value": "제출기간(2개월 또는 연장된 경우 4개월) 내 미제출 시 채무전부의 기한의 이익 상실",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "기한의 이익 상실",
+      "value": "채무를 곧 변제할 의무",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

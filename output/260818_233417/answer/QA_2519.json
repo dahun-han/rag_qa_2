@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2519",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "판매업체가 컴퓨터로 전자 청구서를 보냈을 때 제가 매장 단말기가 아니라 인터넷 뱅킹으로 대출 신청을 해도 되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

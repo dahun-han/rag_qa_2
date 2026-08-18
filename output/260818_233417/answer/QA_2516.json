@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_2516",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 개인사업자로 앱에서 대출이동 신청하면 참여 은행이 제 기존 대출을 조회하고 대신 상환까지 할 수 있는 권한이 생기고, 그걸 서비스 화면이나 홈페이지로 미리 알려주고 동의받는 게 맞나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "서비스 개요",
+      "value": "금융결제원 대출이동시스템을 통해 기존 대출정보를 조회 및 상환하는 서비스",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "제공 조건",
+      "value": "고객 본인의 동의 및 신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "위임 행위",
+      "value": "위임인의 기존대출정보(개설기관명, 대출식별번호, 대출종류, 대출약정금액 등)를 열람청구 하는 행위",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "위임 행위",
+      "value": "위임인의 상환희망 대출의 상환정보(상환가능여부, 상환금액, 상환계좌 등)를 열람청구 하는 행위",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "위임 행위",
+      "value": "위임인의 상환희망 대출에 대해 상환을 요구하는 행위",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "위임 행위",
+      "value": "위임인의 해당 대출의 상환처리 결과를 확인하는 행위",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "고지·동의",
+      "value": "서비스 화면 또는 홈페이지 등 을 통해 고객에 고지",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

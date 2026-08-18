@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1508",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "납품대금이 75일 지연된 채권을 90일 만기 전자방식 외상매출채권 담보대출로 넘겼는데 지연분에 어느 구간의 가산금리를 적용해야 하나요 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "기간별가산금리",
+      "value": "90 일 미만",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기간별가산금리",
+      "value": "%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "대출이자 적용기간",
+      "value": "구매기업이 목적물 등을 수령한 후 60 일을 초과한 날로부터 전자방식외상매출채권 담보대출 만기일까지의 대출이자",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1541",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 수출업체라 구매기업으로부터 받을 외화 대금을 은행에 넘기려는데, 여기서 신한은행은 받는 쪽이고 저는 넘기는 쪽으로 적힌 건지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

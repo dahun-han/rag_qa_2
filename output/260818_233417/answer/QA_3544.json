@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3544",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "장터가 제 거래 결제 정보를 은행에 보냈을 때 은행의 정상 접수 여부가 은행이 보증해주는 금액을 정하는 데 어떤 영향을 주는지 설명 좀 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

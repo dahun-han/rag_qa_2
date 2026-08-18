@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3532",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "모두의 적금을 비대면으로 가입했더니 통장이나 증서가 교부되지 않아 계약 내용을 증명할 때 앱의 계좌 상세 조회만으로 충분한지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

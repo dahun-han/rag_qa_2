@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1514",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 신한 동반성장론으로 대출 신청하려고 하는데, 대출 한도는 원래 약정한 총액과 거래처가 발행한 외상대금 중 어느 쪽을 기준으로 하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출 신청 범위",
+      "value": "원 약정서의 대출약정금액 및 거래기한 범위 내",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대출 신청 범위",
+      "value": "해당 매출채권 금액 이내",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "대출 한도",
+      "value": "원 약정서의 대출약정금액 및 거래기한 범위 내; 해당 매출채권 금액 이내",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

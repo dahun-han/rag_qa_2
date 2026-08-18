@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2518",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 대출 계약서 작성하러 가는데 은행은 그 자리에서 대출 약정서랑 가계 대출 기본약관 사본을 꼭 교부하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

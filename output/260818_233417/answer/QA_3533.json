@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3533",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "신한 U+ 투게더 적금 가입 대상이 누구인지 궁금해요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

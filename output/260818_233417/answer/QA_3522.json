@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3522",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 신혼희망타운 전용 주택담보 장기대출을 신청하려는데 신청 단계에서는 약관만 주고 실제 계약할 때 계약서류를 준다던데, 중요한 불이익 설명은 계약서류 받을 때까지 기다려도 되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}
