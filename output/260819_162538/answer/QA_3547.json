@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3547",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 모바일통지 신청해 놓은 상태에서 우대 이율을 못 지켜 금리가 오르고 이자납입일이 은행휴무일 때문에 다음 영업일로 변경되면 그 금리 인상 통지와 이자납입일 변경 통지 둘 다 모바일로 자동으로 오나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "모바일통지서비스",
+      "value": "이자납입일 및 금리변동내역 안내",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "모바일통지서비스",
+      "value": "이자납입일 5일 전 전송",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "모바일통지서비스",
+      "value": "금리변동내역 금리변동 당일 발송",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "모바일통지서비스",
+      "value": "인상된 금리변동내역 제1조에서 신청한 모바일통지서비스에 따라 통보",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

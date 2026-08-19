@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_3548",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "최소 가입금액이 1원이라 처음에 1원만 넣고 나중에 추가 입금하면 이자 계산에 어떤 영향이 있나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "상품유형",
+      "value": "자유적립식",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입 및 저축조건",
+      "value": "횟수를 자유롭게 입금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "가입 및 저축조건",
+      "value": "월 30만원 이하",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "가입 및 저축조건",
+      "value": "1원 이상",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "이자율",
+      "value": "예금일 당시 영업점 또는 인터넷 홈페이지에 고시된 이자율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "이자지급 방식",
+      "value": "매 입금 건 별로 입금일로부터 만기일 전날까지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "이자지급 방식",
+      "value": "만기일 이후 예금주 요청에 의해 지급",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

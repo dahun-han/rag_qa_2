@@ -1,0 +1,98 @@
+{
+  "item_id": "QA_1546",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "빚 독촉을 규제하는 법이 때리거나 위협하는 걸 금지하면서도 빚을 요구하는 쪽의 정당한 권리 행사도 보장한다고 하는데, 이 법의 목적이 두 쪽을 어떻게 균형 잡으려는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "목적",
+      "value": "공정한 채권추심 풍토를 조성",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "목적",
+      "value": "채권자의 정당한 권리행사 보장",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "목적",
+      "value": "채무자의 인간다운 삶과 평온한 생활 보호",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "금지행위",
+      "value": "채무자 또는 관계인을 폭행·협박·체포 또는 감금",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "금지행위",
+      "value": "위계나 위력을 사용하는 행위",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "금지행위",
+      "value": "정당한 사유 없이 반복적으로 또는 야간(오후 9시 이후부터 다음 날 오전 8시까지)에 방문함으로써 공포심이나 불안감을 유발하여 사생활 또는 업무의 평온을 심하게 해치는 행위",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "관계인 통지사항",
+      "value": "채권추심자의 성명·명칭 및 연락처(채권추심자가 법인인 경우에는 업무담당자의 성명 및 연락처를 포함)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "관계인 통지사항",
+      "value": "채권자의 성명·명칭",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "관계인 통지사항",
+      "value": "관계인이 채무자의 채무 내용 또는 신용에 관한 사실을 알게 하여서는 아니 된다",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N10",
+      "key": "즉시 통지",
+      "value": "기한의 이익을 상실한 후 즉시 통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N11",
+      "key": "즉시 통지",
+      "value": "계속적인 서비스 공급 계약의 해지된 즉시 통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N12",
+      "key": "과태료",
+      "value": "1천만원 이하의 과태료",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
