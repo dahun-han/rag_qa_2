@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2002",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "기업구매자금 대출 신청기한은?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

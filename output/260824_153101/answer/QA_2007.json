@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2007",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "내부직원",
+  "difficulty": "hard",
+  "question": "오프라인로 접수된 주택청약종합저축 신청서에 타인 명의로 작성된 정황과 중요한 정보의 허위 가능성이 동시에 발견되고 주택청약은 만 19세 이상에게만 청약권이 주어진다는 규정이 있는 상황이라면 어떤 사유로 가입 승인을 거절하고 통지해야 하는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입승인",
+      "value": "제7조 제3항 각 호",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입승인",
+      "value": "타인의 정보를 이용한 이용신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "가입승인",
+      "value": "중요 정보를 허위로 기재하여 가입신청을 하는 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "가입승인",
+      "value": "가입신청자가 만 19세 미만인 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "가입승인",
+      "value": "주택 청약권은 만 19세 이상에게만 부여",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "가입승인",
+      "value": "승낙하지 아니할 수 있음",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

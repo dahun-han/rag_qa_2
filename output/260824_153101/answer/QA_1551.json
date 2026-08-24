@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1551",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "기업대출 안내 첫 페이지에 표가 두 번 표기돼 있는데 이게 같은 표를 두 번 싣는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

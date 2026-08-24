@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_1550",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 새 대출로 기존 대출을 자동상환했거든요, 상환 취소가 아예 불가한 경우가 어떤 상황인지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출 상품",
+      "value": "소상공인 상생 매일 땡겨드림 대출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "상환 처리",
+      "value": "상환 취소할 수 없습니다.",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "상환 처리",
+      "value": "신규대출 연계계좌에서 기존대출 상환을 위한 상환금액이 출금되어 자동으로 기존대출을 상환",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "상환 불가 대상",
+      "value": "철회권 행사 가능한 대출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "상환 불가 대상",
+      "value": "연체대출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "상환 불가 대상",
+      "value": "선납이자 환출 불가한 대출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "상환 불가 대상",
+      "value": "본 서비스 이용 신청 당일 부채증명원 및 예금잔액증명서가 발급된 대출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "상환 불가 대상",
+      "value": "별도 협약 등 에 따라 취급된 대출",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

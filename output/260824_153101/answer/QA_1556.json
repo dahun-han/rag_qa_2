@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1556",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 미화 100달러로 8개월 만기로 넣으면 이게 민트 리볼빙 외화예금에서 말하는 외화로 하는 정기예금 조건에 맞는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1554",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "달러 환테크 적립예금은 계약기간이 최소 몇 개월부터 최대 몇 개월까지인지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

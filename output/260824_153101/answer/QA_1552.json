@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1552",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "소상공인 상생 매일 땡겨드림 대출에서 말하는 ‘매일 같은 금액이 입금되는 대출’이 정확히 무슨 뜻이죠?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

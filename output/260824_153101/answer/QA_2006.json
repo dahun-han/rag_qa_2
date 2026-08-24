@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_2006",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "부모 계좌 조회 서비스를 이용하다 계좌이동 중 피해가 발생했고 합의가 안 될 경우 다음 절차를 어떻게 진행해야 하는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "분쟁 해결",
+      "value": "신의성실의 원칙에 의한 합의로 해결",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "분쟁 해결",
+      "value": "금융소비자 보호에 관한 법률 제66조의2에 따른 제소 당시 이용자 주소를 관할하는 지방법원의 전속관할",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "분쟁 해결",
+      "value": "민사소송법",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "손실부담 및 면책",
+      "value": "계좌이동서비스 과정에서 발생한 사고로 인한 손해에 대한 은행의 배상책임",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

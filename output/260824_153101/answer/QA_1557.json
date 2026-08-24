@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1557",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "수입인수보증 신청하려고 상담했는데 신청하면 은행이 먼저 계약 조건을 주는지 설명 좀 해주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}
