@@ -24,8 +24,8 @@ DEFAULT_PATHS = {
 # uuid/doc_nm 컬럼을 갖는다. 없는 경로는 조용히 건너뛴다(참조 데이터가 없어도 파이프라인
 # 자체는 돌아가야 하므로 — 그때는 doc_nm이 source_doc 해시로 남는다).
 DOC_NAME_LOOKUP_PATHS = [
-    "data/documents_selected_persona_rank.xlsx",
-    "data/data_selected_v2.xlsx"
+    "../data/documents_selected_persona_rank.xlsx",
+    "../data/data_selected_v2.xlsx",
 ]
 
 # source_doc은 크게 두 형태다: "{uuid16자리}_{chunk내부id}"(약관·상품설명서 등 대부분)와
@@ -33,6 +33,13 @@ DOC_NAME_LOOKUP_PATHS = [
 # 붙어있어 그 자체로 어느 정도 읽을 수 있음). 문서명 조인은 앞의 uuid16자리 형태에만
 # 적용한다 — 뒤의 두 형태는 참조 파일에 애초에 없는 별도 ID 체계다.
 _UUID_SOURCE_DOC_RE = re.compile(r"^([0-9a-f]{16})_[0-9a-f]+$")
+
+
+def _clean_content(raw) -> str:
+    """빈 셀(NaN)을 빈 문자열로 바꾼다 - ChunkRef.content는 이후 전부(문자열 join, 정규식
+    등)에서 항상 str이라고 가정하므로, 외부 파일을 읽는 이 경계에서 막아야 한다
+    (실제로 recursive_300_100_chunk_span.xlsx에 content가 빈 행이 4건 있었다)."""
+    return "" if pd.isna(raw) else str(raw)
 
 
 def _parse_topic_list(raw) -> list[str]:
@@ -92,7 +99,7 @@ def load_chunk_pool(paths: dict = None, doc_name_lookup: dict = None) -> dict:
                 doc_nm=_resolve_doc_name(row["source_doc"], name_lookup),
                 category=row["category"],
                 subcategory=row["subcategory"],
-                content=row["content"],
+                content=_clean_content(row["content"]),
                 topic_list=_parse_topic_list(row["topic_list"]) if has_topic_list else [],
                 start_char=int(row["start_char"]),
                 end_char=int(row["end_char"]),

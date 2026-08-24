@@ -28,11 +28,11 @@ from prompts import (
 from timing import timed
 
 logger = logging.getLogger("query_pipeline")
-#logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
+logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 # openai/httpx의 "HTTP Request: POST ... 200 OK" 같은 진행 로그를 끈다.
-#logging.getLogger("openai").setLevel(logging.WARNING)
-#logging.getLogger("httpx").setLevel(logging.WARNING)
-#logging.getLogger("httpcore").setLevel(logging.WARNING)
+logging.getLogger("openai").setLevel(logging.WARNING)
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
 
 DataType = Literal["pos_neg", "all_pos", "all_neg"]
 Difficulty = Literal["하", "중", "상"]
@@ -90,10 +90,7 @@ class QueryGenConfig:
                                        # max_tokens로는 "빈 응답(finish_reason=length)"이 잦았다.
 
 
-# ---------------------------------------------------------------------------
 # LLM 클라이언트
-# ---------------------------------------------------------------------------
-
 class LLMClient(Protocol):
     def complete(
         self, system: str, user: str, temperature: float = 0.7,
@@ -221,10 +218,7 @@ class MockLLMClient:
                 "self_contained": True, "open_ended": True, "terms_paraphrased": True, "reason": "ok"}
 
 
-# ---------------------------------------------------------------------------
 # Q1 — 소재 선정
-# ---------------------------------------------------------------------------
-
 _EXCLUDED_TOPIC_RE = re.compile(r"약관|권리|정보제공|동의")
 
 
@@ -249,10 +243,7 @@ def select_focus_topic(slot: QuerySlot) -> str:
     return topics[0]
 
 
-# ---------------------------------------------------------------------------
 # Q2 — 프롬프트 구성
-# ---------------------------------------------------------------------------
-
 def build_system_prompt(slot: QuerySlot, batch_size: int = 1) -> str:
     data_type_instruction = {
         "pos_neg": "질문의 답은 근거 안의 특정 사실 하나로 수렴해야 하지만, 그 사실에 이르는 과정은 "
@@ -570,8 +561,13 @@ def build_system_prompt(slot: QuerySlot, batch_size: int = 1) -> str:
 {_QUERY_STYLE_GUIDE}
    짧은검색형·불완전형을 쓸 때는 상황 설명 서두("제가 ~하려는데")나 존댓말 요청형
    어미("~해주실래요", "~부탁드려요")를 붙이지 말고 명사구+반말 어미로 바로 끝내라
-   (예: "결제대행 에스크로 서비스의 구체적인 적용 대상 누구?"). 내부 약어·코드성
-   표현(PG 등)보다 일상어(결제대행 등)를 우선 써라.
+   (예: "전세대출 중도상환수수료는?"). 내부 약어·코드성 표현(PG 등)보다
+   일상어(결제대행 등)를 우선 써라.
+   **짧다고 해서 "[상품/서비스명] 목적은?/대상은?/누구?"처럼 발췌문의 정의·제목을
+   그대로 되묻기만 하는 빈 질문을 만들면 안 된다** — 발췌문이 실제로 담고 있는
+   구체적 조건·기준·수치·절차 중 하나를 짧게 겨냥해야 한다.
+   - 나쁜 예(정의를 그대로 되묻기만 함, 실질 정보 없음): "노란우산공제 가입 대상은?"
+   - 좋은 예(구체적 항목을 겨냥): "노란우산공제 중도해지 위약금은?"
 {multi_doc_instruction}
 
 [금지 예시]
@@ -597,10 +593,7 @@ def build_user_prompt(slot: QuerySlot, focus_topic: str, feedback: Optional[str]
     return prompt
 
 
-# ---------------------------------------------------------------------------
 # Q4 — 규칙 기반 1차 필터
-# ---------------------------------------------------------------------------
-
 _PII_PATTERNS = [
     re.compile(r"\d{2,4}-\d{3,4}-\d{4}"),
     re.compile(r"\d{6}-\d{7}"),
@@ -666,10 +659,7 @@ def rule_based_filter(query: str) -> tuple[bool, Optional[str]]:
     return True, None
 
 
-# ---------------------------------------------------------------------------
 # Q5 — LLM-judge 검증
-# ---------------------------------------------------------------------------
-
 def llm_judge(llm: LLMClient, query: str, slot: QuerySlot) -> tuple[bool, Optional[str]]:
     excerpt = "\n\n".join(c.content for c in slot.context())
     multihop_boost = slot.difficulty == "상" and len(slot.context()) >= 3
@@ -724,10 +714,7 @@ def batch_llm_judge(llm: LLMClient, queries: list[str], slot: QuerySlot) -> list
     return verdicts
 
 
-# ---------------------------------------------------------------------------
 # Q7 — persona 사후 분류
-# ---------------------------------------------------------------------------
-
 _VALID_QUERY_STYLES = ("정보형", "확인형", "짧은검색형", "문제해결형", "절차문의형", "불완전형")
 
 
@@ -760,10 +747,7 @@ def batch_classify_query_attributes(llm: LLMClient, queries: list[str]) -> list[
     return attrs
 
 
-# ---------------------------------------------------------------------------
 # 오케스트레이터
-# ---------------------------------------------------------------------------
-
 class QueryGenerationFailed(Exception):
     pass
 
@@ -924,10 +908,7 @@ class QueryGenerator:
         )
 
 
-# ---------------------------------------------------------------------------
 # 데모 (MockLLMClient)
-# ---------------------------------------------------------------------------
-
 if __name__ == "__main__":
     from sampling_plan import load_sampling_config, build_sampling_plan, resolve_positive_chunk_count
 

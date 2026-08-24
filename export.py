@@ -1,9 +1,11 @@
-"""export.py — QAItem -> QA/USED_DOCS/INPUT_DATA 3-sheet 파생 + 엑셀 저장"""
+"""export.py — QAItem -> QA/USED_DOCS 시트, retrieval/answer 요약, INPUT_DATA 엑셀 파생"""
 
 from __future__ import annotations
 
+import glob
 import json
 import os
+import re
 from dataclasses import dataclass, field
 from datetime import datetime
 
@@ -81,6 +83,43 @@ DIFFICULTY_EN = {"하": "easy", "중": "normal", "상": "hard"}
 
 def item_id(chunking_method: str, seq: int) -> str:
     return f"{ID_PREFIX}{ID_BASE[chunking_method] + seq}"
+
+
+_RUN_DIR_RE = re.compile(r"^\d{6}_\d{6}$")
+_ITEM_ID_RE = re.compile(r"^QA_(\d+)\.json$")
+_METHOD_BY_BASE = {base: method for method, base in ID_BASE.items()}
+
+
+def resolve_start_seq(output_root: str = "output") -> dict[str, int]:
+    """가장 최근 실행 폴더(output_root 아래 YYMMDD_HHMMSS 폴더 중 이름순 최댓값 -
+    폴더명이 실행 시각이라 이름순 정렬이 곧 시간순이다)의 retrieval/answer json
+    파일명(item_id)에서 청킹방식별 최대 seq를 역산한다 - main()이 이번 실행의
+    번호를 그 다음부터 이어서 매기는 데 쓴다(§export.ID_BASE와 정반대 방향의 계산).
+
+    old_test처럼 YYMMDD_HHMMSS 패턴이 아닌 폴더는 애초에 후보에서 걸러진다.
+    가장 최근 폴더에 특정 방식의 json이 하나도 없으면(예: 그 방식은 비중 0이었거나
+    실행이 산출물 없이 끝남) 그 방식은 결과 dict에 키 자체가 없다 - 호출부가
+    .get(method, 0)으로 처음부터(0) 시작하게 둔다."""
+    if not os.path.isdir(output_root):
+        return {}
+    run_dirs = [d for d in os.listdir(output_root) if _RUN_DIR_RE.match(d)]
+    if not run_dirs:
+        return {}
+    latest = max(run_dirs)
+
+    max_seq: dict[str, int] = {}
+    for sub in ("retrieval", "answer"):
+        for path in glob.glob(os.path.join(output_root, latest, sub, "QA_*.json")):
+            m = _ITEM_ID_RE.match(os.path.basename(path))
+            if not m:
+                continue
+            item_num = int(m.group(1))
+            method = _METHOD_BY_BASE.get(item_num // 1000 * 1000)
+            if method is None:
+                continue
+            seq = item_num - ID_BASE[method]
+            max_seq[method] = max(max_seq.get(method, 0), seq)
+    return max_seq
 
 
 def _hard_negative_chunks(
@@ -185,21 +224,24 @@ def build_input_df(chunks: list[ChunkRef]) -> pd.DataFrame:
     return pd.DataFrame(rows, columns=INPUT_COLUMNS)
 
 
-def build_retrieval_records(items: list[QAItem], sims: dict[str, RetrievalSim]) -> list[dict]:
+def build_retrieval_records(items: list[QAItem]) -> list[dict]:
     """추론(검색성능) 평가용 레코드. candidate_pool 전체(정답+잡음)를 후보로 주고,
-    data_type은 sims(retrieval_sim.simulate_retrieval 결과)에서 가져온다 —
-    문항 생성 시점의 data_type이 아니라, 키워드 겹침 모의 검색으로 이 문항이 실제로
-    얼마나 잘 풀리는지를 반영해 재분류된 값이다. top_k는 고정값(config)이라 출력
-    레코드에는 포함하지 않는다.
+    top_k는 고정값(config)이라 출력 레코드에는 포함하지 않는다.
 
-    positive_chunk_ids는 순수 정답만이 아니라 candidate_pool 전체(pos+neg) chunk_id를
-    담는다 — 이 파일은 외부(벤더/평가자)에 전달되는데, 순수 정답만 담으면
-    candidate_chunks와 대조해 정답이 그대로 드러나기 때문이다. sim.data_type
-    재분류와 무관하게 항상 candidate_pool 전체를 담는다(all_neg로 재분류돼도 애초에
-    candidate_pool에 positive가 없으므로 자연히 negative만 남아 별도 처리가 필요 없다)."""
+    data_type은 문항 생성 시점 값(it.data_type) 그대로다 — sims(모의 검색 재분류
+    결과)를 쓰지 않는다. 이 레코드의 candidate_chunks는 candidate_pool 전체이고
+    positive_chunk_ids는 GOLD 전체이므로, data_type도 그 둘의 실제 관계를 따라야
+    한다. sim.data_type은 "키워드 겹침 모의 검색의 top_k 안에서 실제로 얼마나 잘
+    풀리는지"를 반영한 재분류값이라 top_k 부분집합(topk_chunks)에만 의미가 있다 —
+    여기 쓰면 candidate_chunks 안에 positive_chunk_ids가 그대로 들어있는데 data_type만
+    "all_neg"라고 말하는 모순이 생긴다. build_answer_records의 context는 정확히
+    topk_chunks로 구성되므로 거기서는 sim.data_type을 그대로 쓴다.
+
+    positive_chunk_ids는 GOLD 정답 청크 id만 담는다(task2_eval_io_spec.md §6-②,
+    §13-2 — Recall@K/Precision@K/MRR 계산의 P). sim 재분류와 무관하게 항상
+    it.positive_chunk_ids 그대로다."""
     records = []
     for it in items:
-        sim = sims[it.index]
         # neg_grade는 여기 넣지 않는다 — positive만 None이라 candidate_chunks만 봐도
         # 정답이 그대로 드러난다(검색 시스템에 실제로 넘어가는 파일이라 답 유출 금지).
         # neg_grade는 내부 검수용인 QA.xlsx의 negative_chunk_ids/negative_chunk_meta
@@ -210,13 +252,13 @@ def build_retrieval_records(items: list[QAItem], sims: dict[str, RetrievalSim]) 
         ]
         records.append({
             "item_id": item_id(it.chunking_method, it.seq),
-            "data_type": sim.data_type,
+            "data_type": it.data_type,
             "chunking_method": it.chunking_method,
             "business_domain": [it.category],
             "persona": it.persona,
             "difficulty": DIFFICULTY_EN.get(it.difficulty, it.difficulty),
             "question": it.query,
-            "positive_chunk_ids": [cc.chunk.chunk_id for cc in it.candidate_pool],
+            "positive_chunk_ids": it.positive_chunk_ids,
             "candidate_chunks": candidate_chunks,
         })
     return records
@@ -317,6 +359,14 @@ def _cell_value(v):
     return str(v) if isinstance(v, (list, dict)) else v
 
 
+def _sorted_all_items(items_by_method: dict[str, list[QAItem]]) -> list[QAItem]:
+    """청킹방식 3개의 items를 item_id(=ID_BASE+seq) 오름차순 하나의 리스트로 합친다.
+    통합 산출물(merged qa, retrieval/answer summary)이 전부 이 순서를 공유한다."""
+    all_items = [it for items in items_by_method.values() for it in items]
+    all_items.sort(key=lambda it: ID_BASE[it.chunking_method] + it.seq)
+    return all_items
+
+
 def save_merged_qa_xlsx(
     items_by_method: dict[str, list[QAItem]], system_nm_lookup: dict, out_path: str,
     as_of_date: str | None = None,
@@ -326,8 +376,7 @@ def save_merged_qa_xlsx(
     이어붙여도 충돌하지 않는다 — 검수자가 세 방식을 파일 하나로 훑어볼 때 쓴다."""
     from openpyxl import Workbook
 
-    all_items = [it for items in items_by_method.values() for it in items]
-    all_items.sort(key=lambda it: ID_BASE[it.chunking_method] + it.seq)
+    all_items = _sorted_all_items(items_by_method)
 
     qa_df = build_qa_df(all_items, as_of_date)
     chunk_df = build_chunk_df(all_items)
@@ -348,58 +397,85 @@ def save_merged_qa_xlsx(
     wb.save(out_path)
 
 
-def save_excel(
-    items: list[QAItem], system_nm_lookup: dict, out_path: str, input_chunks: list[ChunkRef] | None = None,
-    as_of_date: str | None = None,
+def save_input_chunks_xlsx(chunk_pool_by_method: dict[str, list[ChunkRef]], out_path: str) -> None:
+    """청킹방식별 원본 input 파일(select_recursive_*_chunk_span.xlsx) 전체를 방식당
+    시트 하나로 묶어 저장한다. items와 무관하게 항상 같은 내용이라 최종 저장 1회만
+    호출한다 — 예전에는 output_{method}.xlsx의 INPUT_DATA 시트가 이 역할을 했다."""
+    with pd.ExcelWriter(out_path) as writer:
+        for method, chunks in chunk_pool_by_method.items():
+            build_input_df(chunks).to_excel(writer, sheet_name=method[:31], index=False)
+
+
+RETRIEVAL_SUMMARY_COLUMNS = [
+    "item_id", "data_type", "chunking_method", "business_domain", "persona", "difficulty", "question",
+    "positive_chunk_ids", "positive_chunk_개수", "후보문서_개수", "후보청크_개수",
+]
+ANSWER_SUMMARY_COLUMNS = [
+    "item_id", "data_type", "chunking_method", "business_domain", "persona", "difficulty", "question",
+    "context", "context_총개수", "context_정답청크_개수", "context_잡음청크_개수", "nuggets", "nugget_개수",
+]
+
+
+def build_retrieval_summary_df(items_by_method: dict[str, list[QAItem]]) -> pd.DataFrame:
+    """retrieval.json(문항당 candidate_chunks 최대 ~2,000개)을 문항 1행짜리 요약으로
+    바꾼다 — candidate_chunks 원문은 담지 않고, 검수자가 훑어볼 문서/청크 개수만 집계한다."""
+    rows = []
+    for it in _sorted_all_items(items_by_method):
+        doc_ids = {cc.chunk.doc_id for cc in it.candidate_pool}
+        rows.append({
+            "item_id": item_id(it.chunking_method, it.seq),
+            "data_type": it.data_type,
+            "chunking_method": it.chunking_method,
+            "business_domain": it.category,
+            "persona": it.persona,
+            "difficulty": DIFFICULTY_EN.get(it.difficulty, it.difficulty),
+            "question": it.query,
+            "positive_chunk_ids": json.dumps(it.positive_chunk_ids, ensure_ascii=False),
+            "positive_chunk_개수": len(it.positive_chunk_ids),
+            "후보문서_개수": len(doc_ids),
+            "후보청크_개수": len(it.candidate_pool),
+        })
+    return pd.DataFrame(rows, columns=RETRIEVAL_SUMMARY_COLUMNS)
+
+
+def save_retrieval_summary_xlsx(items_by_method: dict[str, list[QAItem]], out_path: str) -> None:
+    build_retrieval_summary_df(items_by_method).to_excel(out_path, index=False, sheet_name="retrieval")
+
+
+def build_answer_summary_df(
+    items_by_method: dict[str, list[QAItem]], sims_by_method: dict[str, dict[str, RetrievalSim]],
+) -> pd.DataFrame:
+    """answer.json을 문항 1행짜리 요약으로 바꾼다. context(모의 검색 top_k) 원문은 JSON
+    문자열로 담되, 그 안의 실제 positive/잡음 개수는 sim.topk_chunks의 is_positive를
+    그대로 세어 별도 컬럼으로 바로 보이게 한다(문자열 비교 없이 타입 그대로 집계)."""
+    rows = []
+    for it in _sorted_all_items(items_by_method):
+        sim = sims_by_method[it.chunking_method][it.index]
+        context_chunks = [] if sim.data_type == "all_neg" else sim.topk_chunks
+        n_pos = sum(1 for cc in context_chunks if cc.is_positive)
+        context_json = [
+            {"chunk_id": cc.chunk.chunk_id, "title": cc.chunk.doc_nm, "content": cc.chunk.content}
+            for cc in context_chunks
+        ]
+        rows.append({
+            "item_id": item_id(it.chunking_method, it.seq),
+            "data_type": sim.data_type,
+            "chunking_method": it.chunking_method,
+            "business_domain": it.category,
+            "persona": it.persona,
+            "difficulty": DIFFICULTY_EN.get(it.difficulty, it.difficulty),
+            "question": it.query,
+            "context": json.dumps(context_json, ensure_ascii=False),
+            "context_총개수": len(context_chunks),
+            "context_정답청크_개수": n_pos,
+            "context_잡음청크_개수": len(context_chunks) - n_pos,
+            "nuggets": json.dumps([vars(n) for n in it.nuggets], ensure_ascii=False),
+            "nugget_개수": len(it.nuggets),
+        })
+    return pd.DataFrame(rows, columns=ANSWER_SUMMARY_COLUMNS)
+
+
+def save_answer_summary_xlsx(
+    items_by_method: dict[str, list[QAItem]], sims_by_method: dict[str, dict[str, RetrievalSim]], out_path: str,
 ) -> None:
-    """items에는 이번 체크포인트에서 새로 추가된 항목만 넘긴다. 파일이 이미 있으면
-    기존 워크북을 열어 새 행만 append하고(과거 항목을 다시 읽거나 전체를 재작성하지
-    않음), 없으면 헤더와 함께 새로 만든다. QA/USED_CHUNKS/USED_DOCS는 항목(index)마다
-    독립적인 행이라 append만으로 안전하다 — 다른 항목을 다시 집계할 필요가 없다.
-    input_chunks가 주어지면(최종 저장 1회) INPUT_DATA 시트를 새로 만들어 채운다.
-    as_of_date: QA 시트의 as_of_date 컬럼에 쓸 값("2026. 8. 12" 형식). 안 주면
-    호출 시점의 오늘 날짜를 쓴다 - main()은 실행 시작 시각 기준 날짜를 한 번만 계산해
-    넘겨서, 실행이 자정을 넘겨도 같은 실행의 모든 행이 같은 날짜를 갖게 한다."""
-    from openpyxl import Workbook, load_workbook
-    from openpyxl.styles import Alignment
-
-    qa_df = build_qa_df(items, as_of_date)
-    chunk_df = build_chunk_df(items)
-    doc_df = build_doc_df(chunk_df, system_nm_lookup)
-
-    wb = load_workbook(out_path) if os.path.exists(out_path) else Workbook()
-    if not os.path.exists(out_path):
-        wb.remove(wb.active)
-
-    def _append(sheet_name: str, df: pd.DataFrame, columns: list[str]) -> int:
-        """df를 sheet_name에 append하고, 새로 추가된 첫 번째 행 번호를 반환한다."""
-        if sheet_name in wb.sheetnames:
-            ws = wb[sheet_name]
-        else:
-            ws = wb.create_sheet(sheet_name)
-            ws.append(columns)
-        start_row = ws.max_row + 1
-        for row in df.itertuples(index=False):
-            ws.append([_cell_value(v) for v in row])
-        return start_row
-
-    reason_start = _append("QA", qa_df, QA_COLUMNS)
-    _append("USED_DOCS", doc_df, DOC_COLUMNS)
-
-    # reason은 줄바꿈(\n)이 여러 줄로 실제 보이도록 wrap text를 켠다 (이번에 새로 추가된 행만).
-    ws = wb["QA"]
-    reason_col_idx = QA_COLUMNS.index("reason") + 1  # 1-based
-    for row in ws.iter_rows(min_row=reason_start, min_col=reason_col_idx, max_col=reason_col_idx):
-        for cell in row:
-            cell.alignment = Alignment(wrap_text=True, vertical="top")
-    ws.column_dimensions[ws.cell(row=1, column=reason_col_idx).column_letter].width = 60
-
-    if input_chunks:
-        if "INPUT_DATA" in wb.sheetnames:
-            del wb["INPUT_DATA"]
-        ws_in = wb.create_sheet("INPUT_DATA")
-        ws_in.append(INPUT_COLUMNS)
-        for row in build_input_df(input_chunks).itertuples(index=False):
-            ws_in.append([_cell_value(v) for v in row])
-
-    wb.save(out_path)
+    build_answer_summary_df(items_by_method, sims_by_method).to_excel(out_path, index=False, sheet_name="answer")

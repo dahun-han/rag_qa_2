@@ -5,7 +5,7 @@ sampling_plan.py — config/sampling_plan.yaml 기반 슬롯 플랜 생성 (plan
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Union
 
 import pandas as pd
@@ -37,10 +37,6 @@ class SamplingConfig:
     chunk_method_ratio: dict
     candidate_pool_size: dict
     retrieval_eval: dict           # retrieval.json/answer.json 모의 검색 top_k 범위 (top_k_min/top_k_max)
-    # 청킹방식별 "이미 다른 배치에서 만들어져 눈으로 확인한 개수" - 이번 실행의 item_id가
-    # 이 값 다음 번호부터 이어지게 한다(export.py의 ID_BASE와 함께 씀).
-    # 자동으로 기존 산출물을 스캔해 이어받지 않는다 - 사용자가 실행 전 직접 확인해 채운다.
-    start_seq: dict = field(default_factory=dict)
 
 
 def load_sampling_config(path: str = "config/sampling_plan.yaml") -> SamplingConfig:

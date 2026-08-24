@@ -3,7 +3,7 @@ supports_temperature: false
 temperature: 1.0 
 max_tokens: 6000 
 max_workers: 20 
-checkpoint_every: 2             # 중간 저장할 개수
+checkpoint_every: 10             # 중간 저장할 개수
 qa_retry: 1                     # QA 검증 실패 시 답변/Nugget/reason 재생성 최대 횟수
 query_max_attempts: 2           # 질문 생성 재시도 최대 횟수
 query_batch_size: 5  

@@ -23,7 +23,16 @@ from chunk_selection import (
     pick_positive_chunks,
     prune_to_minimal_evidence,
 )
-from export import QAItem, format_kr_date, save_merged_qa_xlsx, save_report_xlsx
+from export import (
+    QAItem,
+    format_kr_date,
+    resolve_start_seq,
+    save_answer_summary_xlsx,
+    save_input_chunks_xlsx,
+    save_merged_qa_xlsx,
+    save_report_xlsx,
+    save_retrieval_summary_xlsx,
+)
 from llm_config import load_llm_config
 from logging_setup import _attach_file_logging, logger
 from query_pipeline import (
@@ -284,7 +293,8 @@ def _expand_targets_by_method(cfg, methods: list[str]) -> dict[tuple[str, str, s
 
 def _active_methods(methods: list[str], chunk_method_ratio: dict) -> list[str]:
     """비중이 0보다 큰 청킹방식만 남긴다. 비중 0인 방식은 문항을 하나도 만들지 않으므로
-    main()이 이 목록으로 output_{method}.xlsx 등 방식별 산출물 저장을 건너뛴다."""
+    main()이 이 목록으로 최종 산출물(input_chunks.xlsx 시트, retrieval/answer json 등)
+    저장 시 그 방식을 아예 건너뛴다."""
     return [m for m in methods if chunk_method_ratio.get(m, 0) > 0]
 
 
@@ -294,7 +304,7 @@ def _build_combos(
     """targets((카테고리, data_type, 난이도, 청킹방식) -> 목표건수)와 plan_df로부터
     generate_items()가 쓸 초기 combos 상태(조합별 후보 큐·진행 카운터)를 만든다. 같은
     (카테고리, data_type, 난이도)는 청킹방식이 달라도 같은 슬롯 풀(plan_df 큐)을 쓰지만,
-    idx/got/in_flight는 방식별로 독립적으로 추적한다 — 한 방식에서 앞쪽 슬롯 몇 개가
+    idx/got/in_flight/fails는 방식별로 독립적으로 추적한다 — 한 방식에서 앞쪽 슬롯 몇 개가
     검증 실패로 건너뛰어져도 다른 방식은 그 슬롯으로 성공할 수 있으므로, 진행 상황을
     공유하면 안 된다. 순수 함수로 분리해 스레드/LLM 호출 없이 단위 테스트 가능하게 한다."""
     combos: dict[tuple[str, str, str, str], dict] = {}
@@ -307,9 +317,31 @@ def _build_combos(
             & (plan_df["difficulty"] == difficulty)
         ].to_dict("records")
         combos[(category, data_type, difficulty, method)] = {
-            "queue": queue, "idx": 0, "got": 0, "in_flight": 0, "target": target_n,
+            "queue": queue, "idx": 0, "got": 0, "in_flight": 0, "target": target_n, "fails": 0,
         }
     return combos
+
+
+# 콤보 하나가 계속 실패하면(예: target이 1이라 원래는 한 번에 한 슬롯씩만 순차 시도) 매
+# 시도가 LLM 왕복(질문 생성+judge 등, 수십~백여 초)만큼 그대로 지연으로 쌓인다 - 실패가
+# 쌓일수록 같은 콤보에서 여러 슬롯을 동시에 시도하게 해, 어차피 다른 콤보들이 이미 끝나
+# max_workers가 노는 상황에서 그 여유를 이 콤보에 쓰게 한다. 최대 3개까지만 더 허용하는
+# 이유: 무한정 허용하면(특히 target이 큰 콤보에서) 이미 목표를 채웠는데도 뒤늦게 도착하는
+# 여분의 API 호출(비용) 낭비가 커진다 — _max_in_flight가 반환한 여유분을 넘겨 도착한 성공은
+# generate_items()가 state["got"] < state["target"] 체크로 어차피 버리므로 정합성은 깨지지
+# 않고, 비용과 지연 사이의 트레이드오프만 조절한다.
+_STUCK_COMBO_EXTRA_CONCURRENCY = 3
+
+
+def _max_in_flight(state: dict) -> int:
+    """이 콤보가 지금 동시에 시도해도 되는 슬롯 개수(대기 중 futures 개수 상한).
+    기본은 아직 못 채운 목표 개수(target - got)만큼만 - 이미 충분히 제출된 콤보에 더
+    제출하지 않는다. 실패(fails)가 쌓일수록 그 위에 최대 _STUCK_COMBO_EXTRA_CONCURRENCY개까지
+    여유를 더 준다."""
+    remaining = state["target"] - state["got"]
+    if remaining <= 0:
+        return 0
+    return remaining + min(state["fails"], _STUCK_COMBO_EXTRA_CONCURRENCY)
 
 
 def generate_items(
@@ -321,8 +353,12 @@ def generate_items(
 
     ★ 모든 (카테고리, data_type, 난이도, 청킹방식) 조합을 처음부터 동시에 채운다(라운드로빈
     제출) — 조합을 순차 처리하면 목표가 작은 조합에서 max_workers만큼의 스레드를 다 못
-    쓰고 논다. combo별 in_flight 카운트를 따로 추적해, 이미 충분히 제출된 조합에 추가로
-    과다 제출되지 않도록 막는다(그래야 성공해도 취소 못 하는 API 호출 낭비가 없다).
+    쓰고 논다. combo별 in_flight 카운트를 target까지만 채우도록 기본 제한하되(§ _max_in_flight),
+    실패가 쌓인 콤보는 그 위로 여분을 더 허용한다 - target이 1인 콤보(총 건수가 적을 때
+    흔함)는 원래 슬롯 하나씩만 순차 시도해서, judge가 계속 거부하는 콤보 하나가 다른 콤보는
+    다 끝난 뒤에도 혼자 수십 분씩 순차로 슬롯을 태우는 문제가 있었다 - 실패할수록 여러
+    슬롯을 동시에 시도해 지연을 줄인다(그만큼 목표를 채운 뒤 뒤늦게 도착하는 API 호출은
+    버려지는 비용 낭비지만, 지연 대비 감수할 만하다).
 
     목표 건수는 cfg.total_count를 cfg.chunk_method_ratio·category_ratio·data_type_ratio·
     difficulty_ratio로 (카테고리, data_type, 난이도, 청킹방식) 단위까지 확장해 만든다
@@ -359,7 +395,7 @@ def generate_items(
 
         def submit_one(key) -> bool:
             state = combos[key]
-            if state["got"] + state["in_flight"] >= state["target"] or state["idx"] >= len(state["queue"]):
+            if state["in_flight"] >= _max_in_flight(state) or state["idx"] >= len(state["queue"]):
                 return False
             row = state["queue"][state["idx"]]
             state["idx"] += 1
@@ -379,7 +415,7 @@ def generate_items(
             워커를 골고루 나눠 쓰게 함 - 조합 하나가 목표를 다 채워도 다른 조합이
             바로바로 그 자리를 이어받는다)."""
             submitted = 0
-            keys = [k for k, s in combos.items() if s["got"] + s["in_flight"] < s["target"]]
+            keys = [k for k, s in combos.items() if s["in_flight"] < _max_in_flight(s)]
             i = 0
             while submitted < n and keys:
                 key = keys[i % len(keys)]
@@ -418,6 +454,10 @@ def generate_items(
                     pbar.update(1)
                     if pending_count >= llm_cfg.checkpoint_every:
                         flush_pending()
+                elif item is None:
+                    # 목표를 이미 채운 뒤 뒤늦게 도착한 여분의 성공(item is not None인데
+                    # got >= target)은 실패가 아니라 그냥 버려지는 것뿐이므로 fails에 안 센다.
+                    state["fails"] += 1
             # 방금 빈 자리만큼(조합 무관하게) 다시 채워 넣어 항상 max_workers를 꽉 채운다.
             submit_round_robin(llm_cfg.max_workers - len(futures))
 
@@ -501,15 +541,15 @@ def main(n_demo: int | None = None, input_paths: dict | None = None, output_dir:
     cfg = load_sampling_config("config/sampling_plan.yaml")
     llm_cfg = load_llm_config("config/llm_config.yaml")
     plan_df = build_sampling_plan(cfg)
-    print("[1/6] 입력 청크 로딩 중...")
+    print("[1/7] 입력 청크 로딩 중...")
     chunk_pool_by_method = load_chunk_pool(input_paths or INPUT_PATHS)
     methods = list(chunk_pool_by_method.keys())
     active_methods = _active_methods(methods, cfg.chunk_method_ratio)
     chunk_counts = ", ".join(f"{m}: {len(c)}건" for m, c in chunk_pool_by_method.items())
-    print(f"[1/6] 입력 청크 로딩 완료 ({chunk_counts})")
+    print(f"[1/7] 입력 청크 로딩 완료 ({chunk_counts})")
     category_cache = build_category_cache(chunk_pool_by_method)
     document_cache = build_document_cache(category_cache)
-    print("[2/6] 카테고리/문서 캐시 구성 완료")
+    print("[2/7] 카테고리/문서 캐시 구성 완료")
     llm = OpenAILLMClient(cfg=llm_cfg)
     run_started_at = datetime.now()
     as_of_date = format_kr_date(run_started_at)  # QA 시트 as_of_date 컬럼 - 실행 내내 같은 값으로 고정
@@ -524,6 +564,10 @@ def main(n_demo: int | None = None, input_paths: dict | None = None, output_dir:
         n_demo = cfg.total_count  # config/sampling_plan.yaml의 total_count가 곧 실제 생성 목표건수
 
     targets = allocate_targets_by_category(n_demo, cfg.category_ratio, cfg.data_type_ratio, cfg.difficulty_ratio)
+    # 이번 실행의 output_dir을 만들기 전에 스캔해야 한다 - 먼저 만들고 나면 방금 생긴 빈
+    # 폴더가 이름순으로 "가장 최근"이 되어 자기 자신을 참조하게 된다(retrieval/answer가
+    # 아직 하나도 없어 모든 방식이 0으로 잘못 리셋됨).
+    start_seq = resolve_start_seq(OUTPUT_DIR)
     os.makedirs(output_dir, exist_ok=True)
     _attach_file_logging(output_dir)
     logger.info("작업 대상 폴더 : %s", output_dir)
@@ -549,10 +593,7 @@ def main(n_demo: int | None = None, input_paths: dict | None = None, output_dir:
     def on_batch(new_items_by_method: dict[str, list[QAItem]]) -> None:
         for method, new_items in new_items_by_method.items():
             items_by_method[method].extend(new_items)
-        save_checkpoint(
-            chunk_pool_by_method, cfg, new_items_by_method, sims_by_method, output_dir,
-            include_input_data=False, as_of_date=as_of_date,
-        )
+        save_checkpoint(chunk_pool_by_method, cfg, new_items_by_method, sims_by_method, output_dir)
         cumulative = {m: len(items) for m, items in items_by_method.items()}
         logger.info("중간 저장: 이번 배치 반영 (누적: %s)", cumulative)
         logger.info("호출 종류별 소요시간(누적, 지금까지):\n%s", timing_summary())
@@ -560,52 +601,55 @@ def main(n_demo: int | None = None, input_paths: dict | None = None, output_dir:
     # 질문/답변/Nugget/근거는 (슬롯, 청킹방식) 조합마다 완전히 독립적으로 생성된다.
     # checkpoint_every개가 쌓일 때마다 on_batch가 즉시 저장하므로, 전체 목표를 다 채울
     # 때까지 기다리지 않고도 결과 파일이 중간중간 갱신된다.
-    print(f"[3/6] 질문/답변 생성 시작 (전체 목표 {targets_sum}건, 청킹방식 {active_methods}에 배분)")
+    print(f"[3/7] 질문/답변 생성 시작 (전체 목표 {targets_sum}건, 청킹방식 {active_methods}에 배분)")
     items = generate_items(
         category_cache, document_cache, plan_df, methods, cfg, llm, llm_cfg, on_batch=on_batch,
     )
-    print(f"[3/6] 질문/답변 생성 완료: 총 {len(items)}건")
+    print(f"[3/7] 질문/답변 생성 완료: 총 {len(items)}건")
 
     # ★ 최종 재정렬: 생성 중에는 스레드 완료 순서(비결정적)로 seq가 매겨졌으니, 다 끝난
     # 지금 청킹방식별로 카테고리→data_type→난이도→persona 순으로 다시 정렬해 seq를 새로
     # 매긴다 - 실행마다 같은 조건의 문항이 같은 자리(번호)에 모이고, 파일을 열었을 때도
     # 같은 업무영역·유형끼리 번호가 모여 보인다. 세 청킹방식은 문항을 공유하지 않으므로
     # (방식마다 독립 생성) 이 정렬·번호 매김도 방식별로 완전히 독립적으로 한다.
-    # cfg.start_seq가 있으면 그만큼 이어서 번호를 매긴다 - 이전 배치를 사람이 눈으로
-    # 확인하고 sampling_plan.yaml에 직접 채워 넣는 값이라, 자동으로 기존 산출물을 스캔해
-    # 이어받지 않는다.
+    # start_seq(위에서 output_dir 생성 전에 미리 스캔해둔, 가장 최근 실행 폴더 기준
+    # 방식별 최대 seq)가 있으면 그만큼 이어서 번호를 매긴다.
     sort_key = _item_sort_key(cfg)
     for method, method_items in items_by_method.items():
         method_items.sort(key=sort_key)
-        start = cfg.start_seq.get(method, 0)
+        start = start_seq.get(method, 0)
         for i, it in enumerate(method_items):
             it.seq = start + i + 1
     _reorder_by_seq(items_by_method)  # 위 정렬로 이미 seq 오름차순이지만, 방어적으로 한 번 더 보장
-    print("[4/6] 최종 정렬 완료 (카테고리→data_type→난이도→persona 순)")
+    print("[4/7] 최종 정렬 완료 (카테고리→data_type→난이도→persona 순)")
 
-    # 완성 순서 기준 번호로 이미 저장된 파일들을 지우고, 정렬된 새 seq로 전부 다시
-    # 저장한다(체크포인트의 "새 항목만 append" 방식과 달리 이번엔 전체를 새로 쓴다).
-    # INPUT_DATA(입력 전체 청크, 항목과 무관하게 항상 같음)도 이 마지막 저장에서 채운다.
-    # chunk_method_ratio가 0인 방식은 active_methods에서 빠져 있으므로, 아래 저장 함수들에
-    # 그 방식을 아예 안 넘긴다 - 문항이 0건인 방식의 output_{method}.xlsx 자체가 생기지 않는다.
+    # 완성 순서 기준 번호로 이미 저장된 retrieval/answer json을 지우고, 정렬된 새 seq로
+    # 전부 다시 저장한다(체크포인트의 "새 항목만 append" 방식과 달리 이번엔 전체를 새로
+    # 쓴다). chunk_method_ratio가 0인 방식은 active_methods에서 빠져 있으므로, 아래
+    # 저장 함수들에 그 방식을 아예 안 넘긴다 - 문항이 0건인 방식은 산출물 자체가 안 생긴다.
     active_chunk_pool = {m: chunk_pool_by_method[m] for m in active_methods}
     active_items_by_method = {m: items_by_method[m] for m in active_methods}
-    _clear_output_files(output_dir, active_chunk_pool)
-    save_checkpoint(
-        active_chunk_pool, cfg, active_items_by_method, sims_by_method, output_dir,
-        include_input_data=True, as_of_date=as_of_date,
-    )
-    print(f"[5/6] 청킹방식별 최종 파일 저장 완료: {[f'output_{m}.xlsx' for m in active_methods]}")
+    active_sims_by_method = {m: sims_by_method[m] for m in active_methods}
+    _clear_output_files(output_dir)
+    save_checkpoint(active_chunk_pool, cfg, active_items_by_method, sims_by_method, output_dir)
+    print("[5/7] retrieval/answer json 최종 저장 완료 (정렬된 seq 기준)")
 
+    # 산출물 3종: report.xlsx(집계), 통합 QA(검수용), retrieval/answer 요약(문항당
+    # candidate_chunks/context 원문 대신 개수만 훑어보는 용도) - 청킹방식별
+    # output_{method}.xlsx는 더 이상 만들지 않는다(통합 QA/요약이 그 역할을 대신함).
+    # 그 안에만 있던 INPUT_DATA(입력 전체 청크)는 input_chunks.xlsx로 옮겼다.
+    save_input_chunks_xlsx(active_chunk_pool, f"{output_dir}/input_chunks.xlsx")
     save_report_xlsx(active_items_by_method, f"{output_dir}/report.xlsx")
-    print("[5/6] report.xlsx 저장 완료")
+    print("[6/7] input_chunks.xlsx / report.xlsx 저장 완료")
 
     # 세 청킹방식의 QA/USED_DOCS를 하나로 합친 통합본 - 검수자가 파일 하나만 열어도
     # 전체를 훑어볼 수 있게 매 실행마다 자동 생성한다.
     merged_name = f"output_qa_{run_started_at.strftime('%y%m%d_%H%M%S')}.xlsx"
     merged_path = f"{output_dir}/{merged_name}"
     save_merged_qa_xlsx(active_items_by_method, system_nm_lookup={}, out_path=merged_path, as_of_date=as_of_date)
-    print(f"[6/6] 통합 파일 저장 완료: {merged_path}")
+    save_retrieval_summary_xlsx(active_items_by_method, f"{output_dir}/retrieval_summary.xlsx")
+    save_answer_summary_xlsx(active_items_by_method, active_sims_by_method, f"{output_dir}/answer_summary.xlsx")
+    print(f"[7/7] 통합 파일/retrieval_summary.xlsx/answer_summary.xlsx 저장 완료: {merged_path}")
 
     logger.info(
         "전체 완료: 생성 %d건, 최종 저장 건수: %s, report.xlsx/%s 저장됨",
@@ -613,7 +657,7 @@ def main(n_demo: int | None = None, input_paths: dict | None = None, output_dir:
     )
     logger.info("호출 종류별 소요시간(전체 실행 기준):\n%s", timing_summary())
     final_counts = ", ".join(f"{m}: {len(its)}건" for m, its in items_by_method.items())
-    print(f"[6/6] 전체 완료: 생성 {len(items)}건, 최종 저장 건수: ({final_counts})")
+    print(f"[7/7] 전체 완료: 생성 {len(items)}건, 최종 저장 건수: ({final_counts})")
 
 
 if __name__ == "__main__":
