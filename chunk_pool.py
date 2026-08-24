@@ -24,8 +24,8 @@ DEFAULT_PATHS = {
 # uuid/doc_nm 컬럼을 갖는다. 없는 경로는 조용히 건너뛴다(참조 데이터가 없어도 파이프라인
 # 자체는 돌아가야 하므로 — 그때는 doc_nm이 source_doc 해시로 남는다).
 DOC_NAME_LOOKUP_PATHS = [
-    "../data/documents_selected_persona_rank.xlsx",
-    "../data/data_selected_v2.xlsx",
+    "data/data_selected_v2.xlsx",
+    "data/data_selected_v2.xlsx",
 ]
 
 # source_doc은 크게 두 형태다: "{uuid16자리}_{chunk내부id}"(약관·상품설명서 등 대부분)와

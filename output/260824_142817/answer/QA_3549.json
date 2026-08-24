@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_3549",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "추가약정서 설명을 들었다는 증빙으로 제가 꼭 챙겨야 할 사본이 어떤 건가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "교부·설명 의무",
+      "value": "본인에게이 약정서상의 중요한 내용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "교부·설명 의무",
+      "value": "은행여신거래기본약관 (가계용)과 이 약정서의 사본",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

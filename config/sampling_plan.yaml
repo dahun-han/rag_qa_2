@@ -1,4 +1,4 @@
-total_count: 3                    # 실제로 생성할 목표 문항 수(세 청킹방식 전체 합계)
+total_count: 30                    # 실제로 생성할 목표 문항 수(세 청킹방식 전체 합계)
 
 chunk_method_ratio:                 # 청킹방식별 비중 - total_count를 이 비율로 나눈다.
   recursive_300_100: 1              # 0으로 두면 그 방식은 문항도 0건, 산출물 파일도 안 만든다.
@@ -11,16 +11,16 @@ data_type_ratio:                   # pos_neg : all_pos : all_neg 비중
   all_neg: 3
 
 difficulty_ratio:                  # 하 : 중 : 상 비중
-  하: 0.25
-  중: 0.5
-  상: 0.25
+  하: 0
+  중: 0
+  상: 1
 
 category_ratio:                    # 카테고리별 비중
   LS: 0.3                          # 여신-다훈
   DS: 0.3                          # 수신-다훈
   FX: 0.3                          # 외환-다훈
-  CD: 0                         # 내부통제-혜규
-  WM: 0.1                          # 자산관리-혜규
+  CD: 0                            # 내부통제-혜규
+  WM: 0                            # 자산관리-혜규
   CR: 0                            # 고객관리-혜규
 
 persona_ratio:                     # 고객 : 내부직원 비중

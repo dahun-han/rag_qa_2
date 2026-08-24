@@ -1,0 +1,77 @@
+{
+  "item_id": "QA_2546",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 대표에서 물러나야 하는 상황인데 그 과정에서 경영 관련 법을 어긴 사실이 드러나면 보증은 어떻게 되는 건가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "경영권 변동",
+      "value": "약정인이 대표자 사임",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "위반행위",
+      "value": "민법, 상법, 채무자 회생 및 파산에 관한 법률 등 제법령을 위반",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "조치",
+      "value": "형사상의 법적 조치",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "조치",
+      "value": "약정인에 대한 손해배상 청구",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "조치",
+      "value": "보증기업에 대한 사전구상권 행사",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "조치",
+      "value": "보증기업에 대한 신용보증 기한이익상실 (주채권자에 대한 기한이익상실 통지 포함)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "조치",
+      "value": "보증기업에 대한 신용보증 해지 및 회수",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "통지절차",
+      "value": "통지 도달일로부터 2 주 이내에 그 사유를 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "책임경영의무 준수기간",
+      "value": "제 1 조에서 정하는 보증(한도거래) 기간",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
