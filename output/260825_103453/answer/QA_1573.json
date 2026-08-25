@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1573",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 앱에서 등록해서 카시콘 은행 계좌로 급여를 보낼 건데, 이렇게 앱으로 보낸 송금도 법에 따라 정부에 보고될 수 있다는 뜻인지 궁금해요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "보고",
+      "value": "송금의 수취와 지급 관렦 내용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "등록",
+      "value": "은행 글로벌S뱅크 앱에서 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "송금 방식",
+      "value": "현지 태국 Kasikorn 은행 계좌",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

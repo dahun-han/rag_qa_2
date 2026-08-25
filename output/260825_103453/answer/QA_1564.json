@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_1564",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 군 복무 중이라 영업점 가기 힘든데 군인 우대 통장을 스마트폰 앱 신한 SOL뱅크로 가입해도 되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입방법",
+      "value": "영업점 및 신한 SOL뱅크 등 비대면 채널",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "우대이자율",
+      "value": "국군재정관리단으로부터 정기급여를 받거나 군인연금을 수령하는 경우",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "우대이자율",
+      "value": "신한 국방복지카드를 보유하고 신한은행 결제계좌로 지정한 경우",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "우대이자율",
+      "value": "신규일로부터 다음달 원가일 전일까지 우대요건 달성여부에 관계없이 우대이자율",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

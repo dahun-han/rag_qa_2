@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1562",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 40세인데 청년저축왕 적금 가입 가능한가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입대상",
+      "value": "가입일 현재 만18세 이상 만39세 이하인 실명의 개인 및 개인사업자",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

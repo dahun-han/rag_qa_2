@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1569",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "법인이라 구매팩토링 약정 때 이사들이나 주주들이 따로 결정을 해야 하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "결의 요건",
+      "value": "상법에 정한 이사회 결의 또는 총 사원의 결의를 거쳤습니다",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "결의 요건",
+      "value": "정관에서 차입행위 등에 관한 사항을 대표자에게 위임한 경우에는 생략할 수 있습니다",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "결의 요건",
+      "value": "본 조항은 법인인 경우에만 적용합니다",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

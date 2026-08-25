@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1565",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "자동이체로 나눠 납입할 때 월 합계 50만원과 가입할 때 처음 넣어야 하는 최소금액 1천원은 각각 어떻게 적용되는지 알고 싶어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "저축한도",
+      "value": "매월(1일부터 말일까지) 저축한도 (50만원 이하)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입금액",
+      "value": "최소가입금액 (1천원 이상)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "상품유형",
+      "value": "자유적립식 / 횟수에 제한없이 자유롭게 입금",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

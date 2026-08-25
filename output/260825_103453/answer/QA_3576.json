@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3576",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 물건 파는 회사인데 거래 외상대금이 100일짜리면 구매기업용 매출채권 제로 팩토링 대상에 해당하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

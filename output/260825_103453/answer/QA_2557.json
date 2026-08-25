@@ -1,0 +1,91 @@
+{
+  "item_id": "QA_2557",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "내부직원",
+  "difficulty": "normal",
+  "question": "전세지킴보증 신청 처리 시 계약기간이 1년 미만인 경우 어떤 추가 조건들을 확인해서 판정을 내려야 하나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "보증 책임의 제한",
+      "value": "실제 임대차계약기간이 1년 미만",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대항력 확보·유지",
+      "value": "임대차목적물에 입주하여 주민등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "대항력 확보·유지",
+      "value": "입증하는 서류를 당일에 금융기관에 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "대항력 확보·유지",
+      "value": "거주를 이전하거나 주민등록을 이전하는 등",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "전대차·양도·질권 금지",
+      "value": "임대차목적물을 제3자에게 전대한 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "전대차·양도·질권 금지",
+      "value": "보증서 제3자에게 양도 또는 질권 설정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "타기관 보증 및 중복수급",
+      "value": "전세지킴보증과 공사 외 보증기관에서 취급하는 전세보증금반환보증을 동시에 이용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "타기관 보증 및 중복수급",
+      "value": "전세보증금을 중복해서 반환받은 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "권리침해 확인",
+      "value": "압류·가압류·전부･추심명령·채권양도·금융기관 담보 제공",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N10",
+      "key": "보증채무이행 청구",
+      "value": "임대차계약서 원본 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N11",
+      "key": "보증채무이행 청구",
+      "value": "임대차보증금 반환채권에 대한 채권양도계약 체결",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

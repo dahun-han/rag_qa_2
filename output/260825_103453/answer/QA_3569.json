@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3569",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "외화 양도성 예금증서를 30일로 가입하면 나중에 기간을 늘리거나 줄이는 게 전혀 안 되는지 헷갈리네요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "계약기간",
+      "value": "30 일 이상 1 년 이내",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "계약기간",
+      "value": "가입기간 연장 불가",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "해지·지급 제한",
+      "value": "만기일전 지급거절",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "해지·지급 제한",
+      "value": "일부해지 불가",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

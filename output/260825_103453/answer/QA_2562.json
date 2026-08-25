@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_2562",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 2020년에 발행받은 양도성 예금증서인데 개정 시행일 때문에 계약조건이 바뀌면 어느 시행일을 기준으로 보는 건가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "시행일",
+      "value": "2016.9.12",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "시행일",
+      "value": "2019.9.16",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

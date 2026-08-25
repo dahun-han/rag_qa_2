@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_3559",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 금리 바꿔달라고 요청해도 대출을 공사로 넘긴 뒤에는 바꿀 수 없는 건지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출조건",
+      "value": "최초 약정시의 대출조건이 만기시까지 그대로 적용되며 변경이 불가함",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "채권 양도 및 항변",
+      "value": "대출채권 및 근저당권이 실제로 한국주택금융공사로 양도되는 시점까지 은행에 대하여 가지는 항변사유로 한국주택금융공사에 대항할 수 있음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

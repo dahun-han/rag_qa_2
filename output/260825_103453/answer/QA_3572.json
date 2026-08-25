@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_3572",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "지점 명칭이나 소재지가 바뀌면 신고서의 변경사항란에는 뭘 적어야 하나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "신고서 항목",
+      "value": "지 점 명 (국문) (영문)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "신고서 항목",
+      "value": "소 재 지 (국가명) (세부주소)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "신고서 항목",
+      "value": "변경사항 내 용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "신고서 항목",
+      "value": "사 유",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "보고 의무",
+      "value": "해외지점의 명칭 또는 위치를 변경한 경우 변경내용을 당행에 보고할 것",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

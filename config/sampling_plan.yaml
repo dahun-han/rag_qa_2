@@ -1,4 +1,4 @@
-total_count: 90                    # 실제로 생성할 목표 문항 수(세 청킹방식 전체 합계)
+total_count: 60                    # 실제로 생성할 목표 문항 수(세 청킹방식 전체 합계)
 
 chunk_method_ratio:                 # 청킹방식별 비중 - total_count를 이 비율로 나눈다.
   recursive_300_100: 1              # 0으로 두면 그 방식은 문항도 0건, 산출물 파일도 안 만든다.

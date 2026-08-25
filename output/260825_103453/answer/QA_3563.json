@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_3563",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "만기 환율을 확인하는 날에 은행이 환율 고시를 못 해서 관찰일이 다음 영업일로 연기되면 그때의 환율로 수익률을 어떻게 계산하는지 설명 좀 해주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "결정일 및 만기일",
+      "value": "결정일 익영업일 연기 가능; 예금 만기일 연기 가능",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기준·만기지수",
+      "value": "서울시간 오후 3시 30분 이후 당행이 제일 먼저 고시한 JPY/KRW 매매기준율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "수익구조",
+      "value": "가격변동률 10% 이내 → 연 [{가격변동률% X 참여율 3.50% X 365÷예금기간}+ 3.33%]",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "수익구조",
+      "value": "가격변동률 10% 초과 상승 → 연 3.68%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "수익구조",
+      "value": "가격변동률 같거나 하락 → 연 3.33%",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "결정권",
+      "value": "기초자산·예금 상환금액·예금지급시기, 신의성실의 원칙",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

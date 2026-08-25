@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_3558",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 같은 가구에 이미 다른 주택을 보유하고 있으면 이 추가약정 대상에서 제외되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "적용대상",
+      "value": "세대의 세대주 또는 세대원인 채무자(또는 그 배우자)가 추가로 매수",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기한의 이익 상실 사유",
+      "value": "대출실행일 기준으로 제2조에 명시된 처분대상 주택외에 주택을 보유하고 있는 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "약정 위반 영향",
+      "value": "신용정보 집중기관에 채무자의 약정 위반사실 제공 및 향후 3년간 금융기관의 주택 관련 대출 제한",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_1560",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "대출안심플랜 가입 중 계약 후 2년 지나 자살로 사망하면 사망보험금이 대출잔액으로 지급된다고 하는데, 위원회가 보증을 선 상태라면 보험금과 보증 처리 관계를 간단히 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "사망보험금 지급 요건",
+      "value": "최초계약(부활(효력회복) 청약일)부터 2년이 지난 후에 자살한 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "지급금액·지급횟수",
+      "value": "‘약정한 채무잔액’의 100%",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "지급금액·지급횟수",
+      "value": "모든 지급사유중, 최초로 발생하는 1회에한하여 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "보증 관련 의무",
+      "value": "변제하여 위원회가 보증채무를 이행하는 일이 없도록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "지연배상금",
+      "value": "지급일로부터 상환일까지 위원회가 정하는 율을 곱하여 산출한 지연배상금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "통지의무",
+      "value": "주채무 이행의 청구를 받거나 주채무를 이행하였을 때 곧 그 사실을 위원회에 통지",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

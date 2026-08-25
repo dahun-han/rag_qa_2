@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_3561",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 이미 건설근로자 우대 통장 하나를 가지고 있으면 다른 저축예금을 그 통장으로 전환할 수 없는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입·전환 규정",
+      "value": "기존 저축예금의 이 예금으로의 전환신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입·전환 규정",
+      "value": "예금 가입은 (1인 1계좌)",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

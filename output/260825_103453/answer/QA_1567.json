@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1567",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "레이디플랜 저축예금을 보유하면 기본우대 대상이 누구인지 간단히 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "기본우대",
+      "value": "이 예금 보유자",
+      "type": "enum",
+      "vital": true
+    }
+  ]
+}

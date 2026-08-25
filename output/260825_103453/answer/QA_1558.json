@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_1558",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "회수금 일부로 먼저 다른 전세대출을 갚았는데 피해 판정이 나중에 취소되면, 회수금을 먼저 쓴 뒤 남은 제 잔액에 대해 은행이 추가 상환이나 추가 이자를 더 요구할 수 있는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "회수금 처리",
+      "value": "회수금액 전액으로 기존 전세자금대출 우선 상환",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "회수금 처리",
+      "value": "회수 잔여금이 있는 경우 본 대출금 상환에 사용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "전세사기 피해 판정",
+      "value": "결정이 취소 또는 철회되거나 피해 입증이 성립되지 않은 경우 대출금액 전액 상환",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "전세사기 피해 판정",
+      "value": "본 대출금리에 연 3%의 가산금리",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "미상환 시 조치",
+      "value": "은행이 서면으로 독촉",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "미상환 시 조치",
+      "value": "통지 도달일로부터 10일 이상 경과하면 기한의 이익 상실",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "미상환 시 조치",
+      "value": "기한의 이익 상실하여 곧 이를 갚아야 할 의무",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

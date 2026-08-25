@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3565",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "세이프지수 연동예금 달러-원 환율 하락형 1년은 만기까지 두면 원금이 보장된다고 하는데, 환율이 불리하게 움직여도 만기 때는 제 원금이 확실히 보호되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3567",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "유로 같은 다른 외화 현찰을 넣고 곧바로 인출하려고 하는데, 입금할 때랑 인출할 때 둘 다 수수료가 붙는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "수수료 부과",
+      "value": "미국 달러화 이외의 외화 현찰을 외화예금에 입금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "수수료 부과",
+      "value": "은행이 계산근거를 명시하여 청구",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "수수료 부과",
+      "value": "미국 달러화 현찰로 입금한 외화예금을 입금일로부터 7일 이내에 외화로 인출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "수수료 게시",
+      "value": "제2항 내지 제4항과 관련한 수수료율을 인터넷 홈페이지에 게시",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

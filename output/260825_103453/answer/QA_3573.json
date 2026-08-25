@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3573",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "한국에 주소가 있는데 국제기구에서 일하고 있어요, 비거주자로 처리되는 상황이면 거주성 확인서에 어디에 체크하고 어떤 증빙을 붙여야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "거주성 판정",
+      "value": "①번표의 항목 ㉯ '외국에 있는 국제기구에서 근무하고 있습니까?'",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "거주성 판정",
+      "value": "①번표 항목 중 한가지라도 '예(YES)'이면 비거주자",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "증빙서류",
+      "value": "재직증명서, 급여명세서",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "증빙서류",
+      "value": "출입국사실증명서(정부24·출입국관리사무소·주민센터 등), 여권",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

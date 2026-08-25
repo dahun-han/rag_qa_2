@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_2560",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 인천사랑 저축예금 가입자인데 가입일이 20일이면 기본우대 기간이 정확히 언제까지 적용되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "기본우대 기간",
+      "value": "신규일이 16일 이후 : 신규일로부터 익월 15일까지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기본우대 기간",
+      "value": "이후 기본우대 기간 중 해당월 16일 ~ 해당월의 익월 15일까지",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
