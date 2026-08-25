@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2577",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 이미 다른 사람한테 넘긴 채권이 나중에 발견되면 제가 어떤 책임을 지는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "양도인의 진술·보증",
+      "value": "제3자에게 양도한 사실이 없음",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "양도인의 진술·보증",
+      "value": "압류·가압류된 사실이 없음",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "양도인의 진술·보증",
+      "value": "구매기업으로부터 회수가능",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "양도인의 진술·보증",
+      "value": "진술이 허위임이 밝혀진 경우 책임 내용이 발췌문에 명시되어 있지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "양도인의 통지 및 담보제공 의무",
+      "value": "물품의 하자 등으로 은행이 매출채권을 수령하지 못할 위험시 즉시 은행에게 통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "양도인의 통지 및 담보제공 의무",
+      "value": "대상채권이 피담보채무의 변제에 부족할 경우 은행 지시에 따라 변제하거나 대체담보 또는 추가담보 제공",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_3591",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "Value-up은 특정 통화만 가능한 걸로 알고 민트는 가입 가능한 통화 목록과 최저가입금액이 있는데 Value-up 계좌를 민트로 전환하려면 어떤 통화와 최소금액을 맞춰야 하는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입조건",
+      "value": "(USD, JPY, EUR, HKD, GBP, CAD, AUD, NZD, CHF, SGD)",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입조건",
+      "value": "미화 100불 상당액 이상",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "가입조건",
+      "value": "기존 외화 체인지업 예금에서 이 상품으로의 전환",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}

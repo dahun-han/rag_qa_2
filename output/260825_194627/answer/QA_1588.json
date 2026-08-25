@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_1588",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "외화팩토링으로 거래했는데 은행이 매입할 때 이자를 먼저 준다는 얘기 듣고, 구매처가 늦게 갚으면 이자율 적용 기간이 어떻게 되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "이자지급",
+      "value": "개별 매출채권의 매입일로부터 만기일 전일까지의 이자",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "이자지급",
+      "value": "매입일에 선지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "이자율 적용",
+      "value": "결정된 이자율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "이자율 적용",
+      "value": "개별 매출채권 매입대금의 상환기일까지 변경없이 적용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "상환절차",
+      "value": "상환기일은 그 개별 매입금에 대응하는 “매출채권”의 지급기일",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "상환절차",
+      "value": "은행이 구매기업으로부터 직접 변제받아 충당",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "적용규정",
+      "value": "매입금리와 관련하여 정하지 아니한 사항에 대하여는 “은행”의 은행여신거래기본약관(기업용)을 적용",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}

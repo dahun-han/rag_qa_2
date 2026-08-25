@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2583",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "글로벌 멀티카드 신청 시 제공되는 금융거래 정보 항목은?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

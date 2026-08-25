@@ -1,0 +1,77 @@
+{
+  "item_id": "QA_2580",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "앱에서 캐시픽업으로 여러 건 나눠 보내 연간 합계가 6만 달러가 되려고 하는데, 이런 상황에서 은행이 환불이나 송금정보 변경을 받아줘서 처리를 도와줄 수 있는 방법이 있는지 어떻게 해야 하나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "송금 변경·환불",
+      "value": "송금내역조회에서 직접 조건변경 또는 환불신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "송금 변경·환불",
+      "value": "캐시픽업에 한하여 신청가능",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "송금 변경·환불",
+      "value": "수취가 완료된 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "송금 변경·환불",
+      "value": "제휴사 정책에 의해 지급거절된 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "송금 변경·환불",
+      "value": "계좌송금 및 모바일월렛 송금은 신청대상에서 제외",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "송금 한도 및 규정",
+      "value": "송금 한도는 은행 정책 또는 송금 수취국에 따라 변경 될 수 있습니다",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "송금 한도 및 규정",
+      "value": "대한민국 외국환거래규정과 관련된 국제법들의 적용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "송금 한도 및 규정",
+      "value": "신한 은행의 정책에 따라 추가적인 한도 제한",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "송금자금 반환",
+      "value": "송금자금에서 해당 비용이 차감된 금액",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

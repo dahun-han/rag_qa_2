@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_3590",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "앱에서 40,000바트를 보내려다 출금계좌 잔액이 부족해 실패했는데 Prompt Pay로 처리된 건이 있어도 환불이나 재시도는 어떻게 되는지 궁금해요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "송금 취소·조회",
+      "value": "실행 완료한 송금 신청 건을 취소 또는 변경할 수 없음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "송금 취소·조회",
+      "value": "송금완료 시 ‘이체내역 조회하기’로 확인 가능",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "환불 및 입금신청",
+      "value": "비용이 차감된 금액이 반환",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "환불 및 입금신청",
+      "value": "과거송금내역조회에서 본인 명의의 통장으로 입금신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "송금 방식",
+      "value": "Prompt Pay",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "서비스 이용 제한",
+      "value": "잔액부족 등으로 출금계좌에서 송금대금 및 송금수수료를 인출할 수 없는 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "서비스 이용 제한",
+      "value": "해당 사유가 해소될 때까지 서비스의 이용이 제한",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

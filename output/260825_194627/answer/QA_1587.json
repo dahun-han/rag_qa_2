@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_1587",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "환율이 올라 자동예치가 일시정지됐다가 재개되면 재개 시점에 어떤 환율로 외화를 사는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "자동예치 예치 방식",
+      "value": "자동이체 지급계좌가 원화인 경우: 전신환매도율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "자동예치 예치 방식",
+      "value": "자동이체 지급계좌가 외화인 경우: 해당 금액을 외화로 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "환율 적용",
+      "value": "이체일 17시 기준 최종 고시 전신환매도율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "환율 적용",
+      "value": "상한환율 초과 시 자동이체 일시정지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "환율 적용",
+      "value": "환율 하락해도 다음 자동이체일까지 이체되지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "환율 적용",
+      "value": "고객이 외화를 매입(은행이 외화를 매도)하는 경우: 대고객 전신환매도율에서 매매기준율을 차감한 율",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

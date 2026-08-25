@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_1592",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "해외에서 살고 있는 개인이라도 만 18세 이상이면 쏠의 빠른 해외송금 서비스를 이용할 수 있는지 설명 좀 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "이용 대상",
+      "value": "만 18 세 이상 개인 고객",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "송금 사유",
+      "value": "외국읶 거주자 급여송금 사유",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "송금 정보 등록",
+      "value": "거래외국홖은행 지정 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "송금 정보 등록",
+      "value": "은행 영업점에 방문하셔서 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "송금 국가",
+      "value": "총 200 여개 국가",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "송금 국가",
+      "value": "북한, 이란, 러시아, 미얀마 등 일부 국가 제외",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

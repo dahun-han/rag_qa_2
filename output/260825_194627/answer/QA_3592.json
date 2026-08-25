@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3592",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 선적 후 운송서류를 수입자에게 직접 보내고 대금은 나중에 받는 방식으로 수출하는데, 이런 거래도 약정서에 따라 은행의 기업용 거래 약관을 지켜야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

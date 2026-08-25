@@ -1,0 +1,91 @@
+{
+  "item_id": "QA_2581",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "예금 과목이 외화양도성예금증서고 가입가능 통화랑 최저가입금액도 정해져 있던데, 이 과목으로 가입할 때 주의할 점을 외화정기예금 규정까지 같이 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입 조건",
+      "value": "가입가능통화 (USD, JPY, EUR, HKD, GBP, CAD, AUD, NZD, CHF, SGD)",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입 조건",
+      "value": "최저가입금액 미화 1,000불 상당액 이상",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "가입 조건",
+      "value": "계약기간 30일 이상 1년 이내(월단위 또는 일단위)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "발행 형식",
+      "value": "기명 통장식",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "발행 형식",
+      "value": "무기명 및 증서식 불가",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "만기·해지",
+      "value": "만기일전 지급거절 및 일부해지 불가",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "이자 지급",
+      "value": "만기일 이후 원금과 함께 약정이율로 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "이자 지급",
+      "value": "요청 시 월별 지급 가능",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "만기 후 이자",
+      "value": "만기후 1년까지 약정이율의 3/10",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N10",
+      "key": "중도해지 이율",
+      "value": "예치기간 7일 미만: 무이자",
+      "type": "text",
+      "vital": false
+    },
+    {
+      "id": "N11",
+      "key": "중도해지 이율",
+      "value": "예치기간 1개월 이상 3개월 미만: 약정이율의 3/10",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}
