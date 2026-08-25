@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_2575",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 S20 적금에 가입했는데 4개월 뒤 등록금 납부 때문에 중간에 해지를 신청하되 실제로는 돈을 만기 이후에 찾게 되면 계약 때 약속한 이자율, 중간 해지 때 적용되는 이율, 만기 지나서 찾을 때의 이율이 전체 기간에 대해 어떻게 계산되는지 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "중도해지",
+      "value": "가입일 이후 (3개월) 이상 경과한 고객",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "중도해지",
+      "value": "계약기간별로 약정한 이자율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "중도해지 증명서류",
+      "value": "최근 1개월 이내 이미 납부한 등록금 납부 영수증",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "중도해지 증명서류",
+      "value": "납부 마감일이 향후 1개월 이내인 등록금 납부 예정 통지서",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "만기후이자율",
+      "value": "만기일부터 예금을 찾는 날 전날까지의 기간에 대해 예금일 당시 영업점 또는 홈페이지에 고시된 (일반)정기적금의 만기후이자율",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

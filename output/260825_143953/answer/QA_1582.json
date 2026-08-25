@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_1582",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "생활의 지혜 적금은 계약기간이 1년이라 나와 있는데 12개월 이상에 해당하는 이자 산정 방식과 만기 이후에 적용되는 이자율이 서로 다른 방식으로 계산되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "계약기간",
+      "value": "1년제",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "이율 산정",
+      "value": "기본이율 X (1-차감율) (• 12개월이상)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "이율 산정",
+      "value": "연 2% 미만 산출시 연 2% 적용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "이율 산정",
+      "value": "차감율: 예금일 당시 영업점에 별도 고시함",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "만기 후 이자",
+      "value": "만기일부터 찾는 날 전날까지 영업점 또는 홈페이지 고시된 (일반)정기적금의 만기후이자율로 계산한 이자 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "만기 후 이자",
+      "value": "만기지급이자율 변경 시 변경일로부터 기간구분하여 계산",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

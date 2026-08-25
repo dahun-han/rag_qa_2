@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_3577",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 ESCO 시공사로 은행에 받을 돈을 넘기려 하는데, 팩토링 거래의 목적이 어떤 권리관계와 회수 절차를 정하는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "목적",
+      "value": "갑이 을의 병에 대한 매출채권을 양수",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "목적",
+      "value": "갑과 을의 권리관계 및 관련절차의 정함",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "매매 절차",
+      "value": "매출채권 명세서 및 확정일자부 매출채권양도승낙서를 첨부한 매출채권 양도 청약서 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "매매 절차",
+      "value": "에너지절약시설설치 등의 기성확인을 위한 증빙서류·을이 발행한 세금계산서의 진위 여부 확인·매출채권 채무의 분할상환계획 요청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "매매 절차",
+      "value": "을을 대리하여 병에게 당해 매출채권의 양도통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "매매 절차",
+      "value": "기본계약상 매출채권의 양도통지권한을 갑에게 부여",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "회수 절차",
+      "value": "병의 분할상환계획에 따른 분할상환기일에 병으로부터 양수한 매출채권을 변제받음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "회수 절차",
+      "value": "병의 변제자력에 관련된 사정에 현저한 변화가 생기거나 생길 우려가 있을 경우 지체없이 갑에게 통지",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

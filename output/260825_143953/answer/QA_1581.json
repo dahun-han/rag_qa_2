@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_1581",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "정기적금이면서 입금 횟수를 자유롭게 허용한다고 되어 있어서 매달 넣는 금액을 달리해도 되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "상품유형",
+      "value": "정기적금",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "상품유형",
+      "value": "자유적립식",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "계약기간",
+      "value": "12 개월",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "저축방법",
+      "value": "제 9 조의 저축한도 범위 내에서 저축금액과 횟수를 자유롭게 입금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "가입조건",
+      "value": "1 원 이상",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "저축한도",
+      "value": "월 50만원 이하",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
