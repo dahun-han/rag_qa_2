@@ -1,0 +1,21 @@
+﻿{
+  "item_id": "QA_2546",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "주택담보 노후연금 대출 약정서를 받았는데 주소 적는 칸이 두 개인데 제 주소랑 빚을 인수하는 사람 주소 중 어느 걸 적어야 할지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}
