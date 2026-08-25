@@ -1,14 +1,14 @@
-total_count: 60                    # 실제로 생성할 목표 문항 수(세 청킹방식 전체 합계)
+total_count: 15                    # 실제로 생성할 목표 문항 수(세 청킹방식 전체 합계)
 
 chunk_method_ratio:                 # 청킹방식별 비중 - total_count를 이 비율로 나눈다.
-  recursive_300_100: 1              # 0으로 두면 그 방식은 문항도 0건, 산출물 파일도 안 만든다.
-  recursive_600_200: 1
-  recursive_1000_300: 1
+  recursive_300_100: 0.3              # 0으로 두면 그 방식은 문항도 0건, 산출물 파일도 안 만든다.
+  recursive_600_200: 0.4
+  recursive_1000_300: 0.3
 
 data_type_ratio:                   # pos_neg : all_pos : all_neg 비중
-  pos_neg: 0.6
-  all_pos: 0.25
-  all_neg: 0.15
+  pos_neg: 0.5
+  all_pos: 0.5
+  all_neg: 0
 
 difficulty_ratio:                  # 하 : 중 : 상 비중
   하: 0.1
@@ -16,9 +16,9 @@ difficulty_ratio:                  # 하 : 중 : 상 비중
   상: 0.6
 
 category_ratio:                    # 카테고리별 비중
-  LS: 0.2                          # 여신-다훈
-  DS: 0.35                          # 수신-다훈
-  FX: 0.45                          # 외환-다훈
+  LS: 0                          # 여신-다훈
+  DS: 1                          # 수신-다훈
+  FX: 0                          # 외환-다훈
   CD: 0                            # 내부통제-혜규
   WM: 0                            # 자산관리-혜규
   CR: 0                            # 고객관리-혜규
