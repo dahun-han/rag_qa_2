@@ -6,19 +6,19 @@ chunk_method_ratio:                 # 청킹방식별 비중 - total_count를 �
   recursive_1000_300: 1
 
 data_type_ratio:                   # pos_neg : all_pos : all_neg 비중
-  pos_neg: 6.5
-  all_pos: 2
-  all_neg: 1.5
+  pos_neg: 0.6
+  all_pos: 0.25
+  all_neg: 0.15
 
 difficulty_ratio:                  # 하 : 중 : 상 비중
-  하: 0.5
+  하: 0.1
   중: 0.3
-  상: 0.2
+  상: 0.6
 
 category_ratio:                    # 카테고리별 비중
   LS: 0.2                          # 여신-다훈
-  DS: 0.3                          # 수신-다훈
-  FX: 0.5                          # 외환-다훈
+  DS: 0.35                          # 수신-다훈
+  FX: 0.45                          # 외환-다훈
   CD: 0                            # 내부통제-혜규
   WM: 0                            # 자산관리-혜규
   CR: 0                            # 고객관리-혜규
