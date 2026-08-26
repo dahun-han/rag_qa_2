@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_3600",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "대출을 실행한 날부터 채권 만기일까지를 1일 단위로 계산한다고 하는데, 이자를 선지급할 때 만기일을 포함하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출기간",
+      "value": "대출을 실행하는 날로부터 채권만기일까지의 일수",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대출기간",
+      "value": "1년을 365일(윤년은 366일)로 보고 1일 단위",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "이자지급시기",
+      "value": "건별 대출 취급일로부터 상환기일 전일까지 선지급",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

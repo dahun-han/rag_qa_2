@@ -1,0 +1,77 @@
+{
+  "item_id": "QA_3603",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "전력대금을 담보로 은행에 양도해뒀는데 대출에 기금 보증이 붙으면 기금이 보증이행 후 그 담보를 가지고 어떻게 상환을 받는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "채권 양도",
+      "value": "전력대금과 공급인증서 매매대금을 은행에게 양도",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대위담보권",
+      "value": "본인이 채권자에게 제공한 담보로부터 대위권리에 의한 변제",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "상환범위",
+      "value": "미상환 원금 및 미수이자액",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "상환범위",
+      "value": "미납보증료 및 지연보증료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "상환범위",
+      "value": "위약금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "상환범위",
+      "value": "구상채권 잔액에 대한 지연손해금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "상환범위",
+      "value": "채권회수 및 권리 보전·행사에 드는 비용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "통지",
+      "value": "기금이 보증채무 이행 후 본인에게 서면 통지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "통지",
+      "value": "통상의 우송기간 경과한 때에 도달한 것으로 봄",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

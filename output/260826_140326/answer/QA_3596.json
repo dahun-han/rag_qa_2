@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3596",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 약국 전용 신용대출을 받아 매달 같은 금액으로 갚기로 했는데, 나중에 대출기간을 연장해서 매달 갚는 금액을 낮추려면 어떻게 진행해야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "상환조건 변경",
+      "value": "월 상환금액의 변경을 각각 상대방에게 요청할 수 있음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "상환조건 변경",
+      "value": "월 상환금액의 변경은 상호 합의",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "상환조건 변경",
+      "value": "대출기간 연장으로 월 상환금액의 변경",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "상환조건 변경",
+      "value": "채무자가 상환조건 변경 요청에 응하지 않을 경우 은행이 임의로 월 상환금액을 변경",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

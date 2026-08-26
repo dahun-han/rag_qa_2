@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_1598",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 고금리 대출로 이자만 내고 있는데 약정기간 동안 이자를 정상적으로 납부하면 은행이 초과 이자를 자동으로 원금에 충당해 주는 조건이 뭔가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "자동상환",
+      "value": "대출이자율 연 5%를 초과하는 부분(최대 연 4% 이내)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "연체 및 재약정",
+      "value": "제①항의 대출원금 자동상환 즉시 중단",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "연체 및 재약정",
+      "value": "본 '금융지원'의 재약정 불가",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "자동상환",
+      "value": "최종 적용 대출이자율이 연 5% 이하로 하락시 해당이율 적용기간 동안 제2조 제①항의 대출원금 자동상환 중단",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "자동상환",
+      "value": "대출원금 상환 취소",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

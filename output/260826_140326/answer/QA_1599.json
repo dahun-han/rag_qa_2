@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1599",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "대출 실행 후 첫 3개월 우대기간과 이후 매월 우대 유지 판단이 있는데 만기일이 은행 쉬는 날이라 다음 영업일로 옮겨지면 우대 적용 시점은 어떻게 되는지 궁금하네요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "금리우대 기간 및 연장",
+      "value": "대출실행일(기한연장 또는 조건변경일 제외)로부터 3개월간",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "금리우대 기간 및 연장",
+      "value": "이후 1개월 단위로 금리우대 조건 이행 시 자동연장",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "납입일·만기일 처리",
+      "value": "대출만기일(분할상환금 상환일 포함) 또는 이자납입일 등이 은행휴무일인 경우 그 기일을 다음 영업일로",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

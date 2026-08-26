@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3605",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "보증으로 받은 자금을 신청서에 적은 용도랑 다르게 쓰지 않기로 약속한 조항이 제게 어떤 의무를 주는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

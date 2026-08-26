@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_1602",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "우대가 적용 안 돼서 금리가 오른 상태인데 실적을 채우면 그 우대는 언제부터 다시 적용되나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "금리우대 재적용",
+      "value": "금리인상 후 조건을 재이행하는 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "우대율 재산정",
+      "value": "기본우대기간 이후 매월 재산정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "우대기간 연장",
+      "value": "기본우대기간 이후 1개월 단위 우대기간 자동연장",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "금리우대 적용 기준",
+      "value": "대출실행일 1일~10일: 전전월말 기준, 최근 3개월 실적 확인",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "금리우대 적용 기준",
+      "value": "대출실행일 11일~말일: 전월말 기준, 최근 3개월 실적 확인",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

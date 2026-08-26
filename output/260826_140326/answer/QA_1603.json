@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_1603",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 반환을 요청하면 은행이 초과된 손실만 먼저 차감하고 남은 금액을 거래 종료일 환율로 환산해 2영업일 뒤에 돌려주나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "문서 종류",
+      "value": "확 약 서 (은행용)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "담보 반환",
+      "value": "은행은 2영업일 뒤 $1,416,084.21을 제외하고 반환함",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "계산",
+      "value": "한도초과분 = $2,000,000 - $654,720 = $1,345,280",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "거래종료·평가환율",
+      "value": "2021년 7월 9일 (금) USD/KRW = 1,530원 (평가환율)",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

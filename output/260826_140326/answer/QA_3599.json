@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_3599",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "내부직원",
+  "difficulty": "easy",
+  "question": "군인공제회 회원 대출 취급 시 고객이 계약 전에 수수료나 기타 비용 내역을 서면으로 못 받았다고 주장하면 계약 철회 접수를 해야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "사전 고지",
+      "value": "수수료·기타 비용의 항목과 금액을 별도의 서면에 의하여 설명",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대출계약 철회",
+      "value": "「금융소비자 보호에 관한 법률」 제46조에 따라 대출계약을 철회",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "철회 처리",
+      "value": "채무자의 철회의사 확인하여 처리",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

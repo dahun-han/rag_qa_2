@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_3595",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 군인공제회 목돈수탁대출을 이용 중인데 은행이 제 대출을 다른 기관에 넘기고 통지를 보냈을 때 제가 따로 반대하지 않으면 제 목돈수탁금을 다른 대출 담보로 더는 못 쓰나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "채권 양도",
+      "value": "대출채권 및 근질권의 전부 및 일부를 양도(신탁포함) 가능",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "채권 양도",
+      "value": "서면통지를 통해 채권 양수인이 대출채권 및 근질권을 행사",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "담보권 효력",
+      "value": "피담보채권은 은행이 약정에 의한 대출채권을 양도하는 시점에서 확정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "담보권 효력",
+      "value": "근질권으로 설정된 목돈수탁금은 추가대출 등을 위한 담보로 더 이상 활용할 수 없음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "담보권 효력",
+      "value": "이에 이의를 제기하지 않음",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

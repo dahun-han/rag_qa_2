@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_2585",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "보증기간 중에 새로 생긴 연체 이자나 미납 보증료도 보증 범위에 포함되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "보증 범위",
+      "value": "보증기간 중에 발생하는 채무",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "보증 범위",
+      "value": "기금은 이에 대하여 보증을 할 수 있기로 합니다",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "지연비용",
+      "value": "지연손해금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "지연비용",
+      "value": "미상환 보증료 잔액에 ... 지연보증료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "상환 의무",
+      "value": "보증채무이행금액과 손해금 및 관련 비용",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

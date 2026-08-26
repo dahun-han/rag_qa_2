@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_3597",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "폰뱅킹에서 제 계좌를 담보로 잡는다고 안내받았는데, 녹음된 통화가 그 담보 설정 사실을 증명하는 데 쓰이는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "통화내용 녹음",
+      "value": "폰뱅킹을 통한 고객의 『전화로 예금담보대출』 요청내용 녹음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "통화내용 녹음",
+      "value": "본 항에 따른 통화내용 녹음에 대한 고객의 동의",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "담보권설정",
+      "value": "고객이 폰뱅킹을 통하여 지정한 계좌",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "담보권설정",
+      "value": "해당 계좌의 은행 전산 원장에 질권설정 표시됨으로써 질권설정 효력 발생",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

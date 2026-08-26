@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_1597",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "신청할 때 받은 예상금리보다 대출 실행 때 최종 금리가 높게 나왔다면 제가 먼저 확인해볼 만한 이유는 뭐가 있나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "금리",
+      "value": "상품설명 단계에서 고객님께 적용될 것으로 예상되는 금리와 최종적으로 적용되는 금리",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "총원리금·수수료 부담",
+      "value": "금리변동, 연체여부, 한도사용(한도대출), 상환구조",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "수수료",
+      "value": "보증료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "수수료",
+      "value": "상품에 해당되는 수수료 등 비용의 경우, 체크박스에 표시됩니다.",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}

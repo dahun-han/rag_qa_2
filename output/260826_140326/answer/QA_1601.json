@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1601",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "이미 전자채권 권리를 은행에 넘긴 상태에서 채권에 압류가 걸려 대출 취급이 제한됐다가 전산장애로 은행이 대신 실행해주면 그 수수료는 누가 부담하나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출 대행",
+      "value": "전산장애 또는 전산조작미숙 등 부득이한 경우 본인의 요청에 따라 대출신청과 실행을 은행이 대행",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대출 대행",
+      "value": "본인은 은행 소정의 수수료를 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "대출취급의 제한",
+      "value": "은행이 채권보전에 지장이 있다고 판단하여 대출취급을 제한하는 경우 본인은 은행에 일체의 책임을 묻지 아니함",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
