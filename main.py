@@ -265,19 +265,31 @@ def build_item(
 
 
 def _expand_targets_by_method(cfg, methods: list[str]) -> dict[tuple[str, str, str, str], int]:
-    """cfg.total_count를 청킹방식별 (카테고리, data_type, 난이도) 목표로 확장한다.
+    """cfg로부터 청킹방식별 (카테고리, data_type, 난이도) 목표를 확장한다.
 
-    반드시 total_count를 chunk_method_ratio로 먼저 나누고(방식별 총량), 그 총량 각각에
-    대해 category×data_type×난이도 배분(allocate_targets_by_category)을 독립적으로
-    다시 돌리는 순서로 계산해야 한다 — 거꾸로 이미 잘게 쪼개진 (카테고리,data_type,난이도)
-    목표 하나하나를 방식별로 allocate()하면, 그 값이 작을 때(흔한 경우: total_count가
-    카테고리·유형·난이도 조합 수만큼 잘게 나뉘어 1건 안팎이 되는 상황) 최대잔여법의
-    나머지 배정이 매번 ratio dict의 첫 번째 방식으로만 쏠려버린다(예: chunk_method_ratio가
-    1:1:1이어도 결과가 20:0:0이 되는 식). total_count 레벨에서 먼저 나누면 숫자가 커서
-    이 쏠림이 사실상 사라진다.
+    1) 타겟 모드 (cfg.targets 지정 시):
+       지정된 TargetItem 목록으로부터 (category, data_type, difficulty, chunking_method) 조합 목표 건수를 직접 매핑한다.
+
+    2) 비율 모드 (cfg.targets 미지정 시):
+       반드시 total_count를 chunk_method_ratio로 먼저 나누고(방식별 총량), 그 총량 각각에
+       대해 category×data_type×난이도 배분(allocate_targets_by_category)을 독립적으로
+       다시 돌리는 순서로 계산해야 한다 — 거꾸로 이미 잘게 쪼개진 (카테고리,data_type,난이도)
+       목표 하나하나를 방식별로 allocate()하면, 그 값이 작을 때(흔한 경우: total_count가
+       카테고리·유형·난이도 조합 수만큼 잘게 나뉘어 1건 안팎이 되는 상황) 최대잔여법의
+       나머지 배정이 매번 ratio dict의 첫 번째 방식으로만 쏠려버린다(예: chunk_method_ratio가
+       1:1:1이어도 결과가 20:0:0이 되는 식). total_count 레벨에서 먼저 나누면 숫자가 커서
+       이 쏠림이 사실상 사라진다.
 
     비중 0(또는 배분 결과 0)인 방식은 결과 dict에 키 자체가 없다 - main()이 이 키
     집합으로 "이 방식은 산출물을 아예 안 만든다"를 판단한다(_active_methods 참고)."""
+    if cfg.targets:
+        expanded: dict[tuple[str, str, str, str], int] = {}
+        for t in cfg.targets:
+            if t.chunking_method in methods and t.count > 0:
+                key = (t.category, t.data_type, t.difficulty, t.chunking_method)
+                expanded[key] = expanded.get(key, 0) + t.count
+        return expanded
+
     expanded: dict[tuple[str, str, str, str], int] = {}
     for method, method_total in allocate(cfg.total_count, cfg.chunk_method_ratio).items():
         if method not in methods or method_total <= 0:
@@ -291,11 +303,15 @@ def _expand_targets_by_method(cfg, methods: list[str]) -> dict[tuple[str, str, s
     return expanded
 
 
-def _active_methods(methods: list[str], chunk_method_ratio: dict) -> list[str]:
-    """비중이 0보다 큰 청킹방식만 남긴다. 비중 0인 방식은 문항을 하나도 만들지 않으므로
+def _active_methods(methods: list[str], cfg) -> list[str]:
+    """비중 또는 목표 건수가 0보다 큰 청킹방식만 남긴다. 비중 0인 방식은 문항을 하나도 만들지 않으므로
     main()이 이 목록으로 최종 산출물(input_chunks.xlsx 시트, retrieval/answer json 등)
-    저장 시 그 방식을 아예 건너뛴다."""
-    return [m for m in methods if chunk_method_ratio.get(m, 0) > 0]
+    저장 시 그 방식을 아예 건너뛴다.
+    타겟 모드일 때는 targets에 유효한 count로 지정된 청킹방식만 활성화한다."""
+    if cfg.targets:
+        active_set = {t.chunking_method for t in cfg.targets if t.count > 0}
+        return [m for m in methods if m in active_set]
+    return [m for m in methods if cfg.chunk_method_ratio.get(m, 0) > 0]
 
 
 def _build_combos(
@@ -544,7 +560,7 @@ def main(n_demo: int | None = None, input_paths: dict | None = None, output_dir:
     print("[1/7] 입력 청크 로딩 중...")
     chunk_pool_by_method = load_chunk_pool(input_paths or INPUT_PATHS)
     methods = list(chunk_pool_by_method.keys())
-    active_methods = _active_methods(methods, cfg.chunk_method_ratio)
+    active_methods = _active_methods(methods, cfg)
     chunk_counts = ", ".join(f"{m}: {len(c)}건" for m, c in chunk_pool_by_method.items())
     print(f"[1/7] 입력 청크 로딩 완료 ({chunk_counts})")
     category_cache = build_category_cache(chunk_pool_by_method)
@@ -560,32 +576,42 @@ def main(n_demo: int | None = None, input_paths: dict | None = None, output_dir:
     # 먼저 찍는다 - 동시에 여러 실행을 띄우거나 나중에 다시 볼 때 헷갈리지 않도록.
     print(f"작업 대상 폴더 : {output_dir}")
 
-    if n_demo is None:
-        n_demo = cfg.total_count  # config/sampling_plan.yaml의 total_count가 곧 실제 생성 목표건수
-
-    targets = allocate_targets_by_category(n_demo, cfg.category_ratio, cfg.data_type_ratio, cfg.difficulty_ratio)
-    # 이번 실행의 output_dir을 만들기 전에 스캔해야 한다 - 먼저 만들고 나면 방금 생긴 빈
-    # 폴더가 이름순으로 "가장 최근"이 되어 자기 자신을 참조하게 된다(retrieval/answer가
-    # 아직 하나도 없어 모든 방식이 0으로 잘못 리셋됨).
     start_seq = resolve_start_seq(OUTPUT_DIR)
     os.makedirs(output_dir, exist_ok=True)
     _attach_file_logging(output_dir)
     logger.info("작업 대상 폴더 : %s", output_dir)
-    # n_demo를 그대로 찍지 않고 targets 실제 합계를 찍는다 — allocate()의 배분 결과가
-    # 요청 건수와 어긋나면(설정 오류 등) 로그에서 바로 드러나야 하므로, 합계가 요청
-    # 건수와 다르면 즉시 경고까지 남긴다.
-    targets_sum = sum(targets.values())
-    if targets_sum != n_demo:
-        logger.warning(
-            "목표 건수 배분 합계(%d)가 요청 건수(%d)와 다릅니다 — data_type_ratio/difficulty_ratio "
-            "설정을 확인하세요(allocate()는 ratio 합계로 정규화하지만, 예상 밖의 값이면 여기서 어긋남).",
-            targets_sum, n_demo,
+
+    if cfg.targets:
+        expanded_targets = _expand_targets_by_method(cfg, methods)
+        targets_sum = sum(expanded_targets.values())
+        if n_demo is None:
+            n_demo = targets_sum
+        logger.info(
+            "[타겟 지정 생성 모드] 총 %d개 타겟 조건, 목표 건수 합계: %d건 (활성 청킹방식: %s)",
+            len(cfg.targets), targets_sum, active_methods,
         )
-    logger.info(
-        "목표 건수(카테고리×data_type×난이도별): %s (합계 %d건, chunk_method_ratio %s로 "
-        "청킹방식 %s에 배분) — 미달 조합은 자동 백필로 재분배됨",
-        targets, targets_sum, cfg.chunk_method_ratio, active_methods,
-    )
+        for (cat, dt, diff, meth), count in expanded_targets.items():
+            logger.info("  - [%s | %s | %s | %s] : %d건", cat, meth, dt, diff, count)
+    else:
+        if n_demo is None:
+            n_demo = cfg.total_count  # config/sampling_plan.yaml의 total_count가 곧 실제 생성 목표건수
+
+        targets = allocate_targets_by_category(n_demo, cfg.category_ratio, cfg.data_type_ratio, cfg.difficulty_ratio)
+        # n_demo를 그대로 찍지 않고 targets 실제 합계를 찍는다 — allocate()의 배분 결과가
+        # 요청 건수와 어긋나면(설정 오류 등) 로그에서 바로 드러나야 하므로, 합계가 요청
+        # 건수와 다르면 즉시 경고까지 남긴다.
+        targets_sum = sum(targets.values())
+        if targets_sum != n_demo:
+            logger.warning(
+                "목표 건수 배분 합계(%d)가 요청 건수(%d)와 다릅니다 — data_type_ratio/difficulty_ratio "
+                "설정을 확인하세요(allocate()는 ratio 합계로 정규화하지만, 예상 밖의 값이면 여기서 어긋남).",
+                targets_sum, n_demo,
+            )
+        logger.info(
+            "목표 건수(카테고리×data_type×난이도별): %s (합계 %d건, chunk_method_ratio %s로 "
+            "청킹방식 %s에 배분) — 미달 조합은 자동 백필로 재분배됨",
+            targets, targets_sum, cfg.chunk_method_ratio, active_methods,
+        )
 
     items_by_method: dict[str, list[QAItem]] = {m: [] for m in methods}
     sims_by_method: dict[str, dict[str, RetrievalSim]] = {m: {} for m in methods}
