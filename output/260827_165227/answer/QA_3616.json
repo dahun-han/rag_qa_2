@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_3616",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "내부직원",
+  "difficulty": "easy",
+  "question": "투자자들 돈만 예치하라고 약정돼 있는데 실수로 회사 자기자금이 섞여 들어갔어요, 이런 경우 누가 책임지는 건가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "예치자원",
+      "value": "투자자가 예탁한 금전",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "책임",
+      "value": "제반 문제는 예금주의 책임",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "책임",
+      "value": "신한은행의 고의 또는 중과실 인정 시 예외",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

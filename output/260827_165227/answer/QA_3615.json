@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_3615",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "투자전용 거주자 외화 계좌에 들어가는 돈은?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "예치자원",
+      "value": "투자자가 예탁한 금전으로 한정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "약정의 미정 사항",
+      "value": "본 약정에서 정하지 아니한 사항은 해당 예금약관 및 관련 신한은행 규정에 따름",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
