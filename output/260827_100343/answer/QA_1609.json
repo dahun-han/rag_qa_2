@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_1609",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "만기 지나서 7개월 됐고 상대가 소송 중이라는 서류를 은행에 냈다가 그 소송이 7개월째에 취하됐는데 제가 그 전에 별도로 담보로 돈을 맡겨둔 사실이 있으면 은행이 언제 예탁금을 주는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "지급 사유",
+      "value": "갑이 병을 위하여 별도로 담보공탁하였음을 입증하는 서면",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "지급 시점",
+      "value": "동 소송이 만기일로부터 6개월 이내에 각하 또는 취하",
+      "type": "text",
+      "vital": false
+    },
+    {
+      "id": "N3",
+      "key": "지급 시점",
+      "value": "만기일로부터 6개월이 경과하여 각하 또는 취하되었을 경우에는 동 사실을 갑이 입증한 때",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

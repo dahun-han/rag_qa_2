@@ -1,0 +1,105 @@
+{
+  "item_id": "QA_1614",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "은행이 구매기업에게 대금을 우리한테 넘겼다고 통지했고 구매기업 정부가 채무재조정 중이라 은행이 본인 동의 없이도 연장을 받아줄 수 있는 상황이면, 결국 구매기업이 못 갚을 때 제가 부담해야 할 비용과 절차는 어떻게 되나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "상환청구권",
+      "value": "신한은행이 구매기업의 상환능력에 관한 사유로 매출채권을 회수하지 못하더라도 협력기업에 대해 매입 · 대출금 상환청구를 하지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "비용 부담",
+      "value": "이자",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "비용 부담",
+      "value": "할인료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "비용 부담",
+      "value": "수수료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "비용 부담",
+      "value": "지연배상금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "비용 부담",
+      "value": "손해배상금",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "비용 부담",
+      "value": "권리행사·권리보전·담보의 취득 및 처분에 따른 비용",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "비용 부담",
+      "value": "운임",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "비용 부담",
+      "value": "보험료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N10",
+      "key": "비용 부담",
+      "value": "기타 모든 비용 및 손해",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N11",
+      "key": "지급의무",
+      "value": "은행이 계산근거를 명시하여 청구하면 본인은 곧 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N12",
+      "key": "이의제기 절차",
+      "value": "본인이 계산방법 등에 관하여 이의를 제기하면 은행은 이를 심사하여 그 결과를 통보",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N13",
+      "key": "요율·계산방법의 공시",
+      "value": "은행은 제1항의 이자·할인료·수수료 등 제반비용의 요율 및 계산방법을 고시",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

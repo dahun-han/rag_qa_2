@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_2593",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "자동이체가 설정된 개인 계좌를 옮기려는데 온라인으로 계좌이동을 신청하면 신청서 제출 절차랑 자동이체 해지와 신규등록은 어떻게 처리되는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "신청 채널",
+      "value": "인터넷뱅킹(모바일뱅킹 포함), 자동이체통합관리시스템(www.payinfo.or.kr), 애플리케이션",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "신청 절차",
+      "value": "계좌이동서비스신청서를 작성하여 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "출금계좌 변경 방식",
+      "value": "변경 전 다른 금융기관에 등록된 자동이체 해지 후 변경 후 은행에서 자동이체 신규 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "처리기간",
+      "value": "자동납부는 신청일 포함 최대 6영업일 소요될 수 있음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "처리기간",
+      "value": "결제일에는 출금작업으로 변경이 불가할 수 있음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "처리기간",
+      "value": "자동송금은 이체일로부터 3영업일 이전에 신청",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "신청결과 통보",
+      "value": "요청 시 사전에 합의한 방법으로 통보, 요청 없으면 통보 생략 가능",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

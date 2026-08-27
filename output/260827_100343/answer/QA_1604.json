@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_1604",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 만기 전에 이자 납부가 밀려 원금 자동상환이 중단된 적 있고 최근 계좌에 압류 통지가 왔는데, 이런 상태로 만기가 되면 지원이 종료되면서 어떤 불이익을 받는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출원금 자동상환",
+      "value": "이자를 납부하지 않아 연체가 발생할 경우 대출원금 자동상환 즉시 중단",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대출원금 자동상환",
+      "value": "연체가 해소되더라도 본 '금융지원'의 재약정은 불가",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "기한의 이익 상실",
+      "value": "예치금 등 각종 채권에 대한 압류명령·체납처분 압류통지 도달",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "기한의 이익 상실",
+      "value": "기한의 이익 상실 시 채무자는 대출금을 즉시 상환",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "기한의 이익 상실",
+      "value": "연체이자 부담, 일정기간 경과 후 신용정보 등록 등 불이익",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "지원 적용판정",
+      "value": "대출 만기 시 적용대상 여부를 다시 판정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "지원 적용판정",
+      "value": "만기 시 적용대상에 해당하지 않거나 지원기간이 종료되면 본 제도의 지원은 종료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "비용 부담",
+      "value": "채무자의 채무불이행으로 인해 발생하는 비용은 채무자 부담",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

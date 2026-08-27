@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2588",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "CD수익률 비상사태가 나서 산출이 중단될 때 은행이 고객과 보증인에게 대체금리 적용 내용과 중단 사유를 어떻게 공지하고 설명하는 절차인가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "금융계약의 대체금리",
+      "value": "신한은행과 고객님 간 협의된 대체금리",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "산출업무 중단 절차",
+      "value": "관리위원회의 1차 심의·의결",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "산출업무 중단 절차",
+      "value": "(협회) 인터넷 홈페이지 등을 통한 산출업무 중단 사유·시기 등의 공시 및 의견 수렴",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "산출업무 중단 절차",
+      "value": "이해관계자 의견 검토 및 반영 여부 결정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "산출업무 중단 절차",
+      "value": "관리위원회의 2차 심의·의결",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "보증인 관련 고지·교부 의무",
+      "value": "본인 및 연대보증인에게 약정서의 중요한 내용 및 채무관련 신용정보 등을 설명하고 약정서 사본을 교부",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

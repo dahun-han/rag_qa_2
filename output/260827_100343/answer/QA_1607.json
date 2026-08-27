@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_1607",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "비대면 대출 동의서에서 누가 제 개인정보를 수집하고 거래내역으로 구체적으로 어떤 항목을 모으는지",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "수집·이용하는 자",
+      "value": "㈜신한은행제휴금융사",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "신용거래정보",
+      "value": "상담 등 을 통해 생성되는 정보",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "신용거래정보",
+      "value": "거래일시",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "신용거래정보",
+      "value": "상품종류",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "신용거래정보",
+      "value": "금액",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "신용거래정보",
+      "value": "거래조건(이자율, 만기 등)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "신용거래정보",
+      "value": "거래설정·내역 정보",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "신용거래정보",
+      "value": "대출(현금서비스), 신용(체크)카드, 개인채무보증 거래설정·내역 정보",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

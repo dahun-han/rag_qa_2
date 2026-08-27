@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2597",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "은행 안내엔 송금 통화가 태국 바트라고 되어 있고 머니그램 쪽은 보낼 때 미화로 처리될 수 있다고 해서, 제가 등록하면 수취인이 현지에서 다른 통화로 돈을 받게 되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "송금 통화",
+      "value": "송금통화는 태국 바트",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "머니그램 통화 처리",
+      "value": "A transfer made to a country outside of Korea shall be made in United States Dollars (USD)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "머니그램 통화 처리",
+      "value": "Service Rep. will convert any other currency to USD at the time of sending",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "환전·수수료",
+      "value": "the Service Rep may charge an exchange and/or an administrative fee",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "환율 결정",
+      "value": "exchange rate established by MoneyGram or its Service Reps at the time funds are disbursed to the receiver",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "환율 결정",
+      "value": "Service Reps within a country may not apply a uniform currency exchange rate",
+      "type": "text",
+      "vital": false
+    }
+  ]
+}

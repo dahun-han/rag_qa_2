@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2595",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "머니그램 연계 신속 해외송금의 수수료 항목은 무엇인가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "수수료",
+      "value": "USD 3.5",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "수수료",
+      "value": "송금 받을 때 수취인 별도 수료 없음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "수수료",
+      "value": "the Service Rep may charge an exchange and/or an administrative fee",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "수수료",
+      "value": "A receiver shall not be charged for consumer fees of any kind by the Service Rep for receiving a transfer, unless otherwise required by local regulations",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "수수료",
+      "value": "Fees applicable to the MoneyGram ® Money Transfer Service can be seen on SHB ’ s website",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "업무제휴",
+      "value": "신한은행과 머니그램",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3610",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "개인사업자 대출 이동 신청서를 보는데, 제가 권한을 주면 은행이 제 대출 내용을 확인하고 대신 갚는다고 써 있네요, 이게 정확히 어떤 권한을 주는지 설명 좀 해주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

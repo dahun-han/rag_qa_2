@@ -1,0 +1,63 @@
+{
+  "item_id": "QA_1612",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "내부직원",
+  "difficulty": "hard",
+  "question": "공유계좌에 자동납부가 걸려 있는 계좌이동 건을 처리할 때 직원 확인 항목은?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "이용대상",
+      "value": "부 또는 모, 자녀가 모두 SOL패밀리에 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "이용대상",
+      "value": "금융거래 정보제공을 동의 받는 자녀는 만17세 이상 실명의",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "제공 서비스 내용",
+      "value": "공유계좌의 상품명 및 계좌번호, 계좌잔액, 공유일 이후의 거래내역, 기타 계좌정보",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "계좌이동서비스",
+      "value": "「변경 전 다른 금융기관」에 등록된 자동이체를 해지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "계좌이동서비스",
+      "value": "「변경 후 은행」에 자동이체를 신규 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "계좌이동서비스",
+      "value": "요금종류에 따라 출금계좌변경에 신청일 포함 최대 6영업일",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "계좌이동서비스",
+      "value": "요금결제일에는 변경이 불가할 수",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

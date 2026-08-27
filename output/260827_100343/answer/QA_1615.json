@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_1615",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "수퍼기업자유예금으로 분류된 계좌에 제가 상한환율과 하한환율을 지정하면 자동이체 처리에 어떤 영향이 있는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "자동이체 처리",
+      "value": "상한환율이상으로 환율이 상승할 경우 자동이체 일시정지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "자동이체 처리",
+      "value": "다음 이체일까지 예치되지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "추가 예치 및 지급",
+      "value": "하한환율 미만으로 환율 하락 시 고객이 미리 정한 배수 단위로 추가 예치 가능",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "추가 예치 및 지급",
+      "value": "증액된 예치금액만큼 원화예금에서 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "환율 기준",
+      "value": "예치일 17시 기준 최종 고시 현찰매도율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "자동이체 신청",
+      "value": "1일, 1주일, 1개월 단위로 신청",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "원화대가 거래",
+      "value": "원화대가로 입 ∙ 출금 거래 시 현찰환율로만 거래",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "원화대가 거래",
+      "value": "외화대체 거래 불가",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

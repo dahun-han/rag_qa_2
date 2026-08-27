@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_1613",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "이체일 오후 5시 기준으로 은행 환율을 본다고 하는데 그 기준이 자동이체의 실행 여부에서 어떤 역할을 하는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "환율 기준",
+      "value": "이체일의 17시 기준 최종 고시 전신환 매도율",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "자동이체 신청",
+      "value": "외화예금 자동이체 신청서 기재: 상한환율, 하한환율, 배수",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "자동이체 처리",
+      "value": "상한환율 초과 시 자동이체 일시정지 및 다음 자동이체일까지 미이체",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "자동이체 처리",
+      "value": "하한환율 미만 시 고객이 미리 정한 배수 단위로 추가 이체",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "자동이체 처리",
+      "value": "증액된 이체 금액만큼 자동이체 계좌에서 지급",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
