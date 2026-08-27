@@ -3,11 +3,6 @@
 # data/target/taget_count_list.csv 기준 타겟 목록 (총 33건)
 # ==============================================================================
 targets:
-  - category: DS
-    chunking_method: recursive_600_200
-    data_type: all_pos
-    difficulty: 중
-    count: 1
   - category: FX
     chunking_method: recursive_300_100
     data_type: pos_neg
