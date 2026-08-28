@@ -1,0 +1,9 @@
+category,chunking_method,data_type,difficulty,count
+수신,300_100,all_neg,상,1
+수신,300_100,all_neg,중,2
+여신,300_100,all_pos,상,1
+여신,300_100,all_neg,중,2
+여신,600_200,all_neg,상,1
+외환,600_200,all_neg,중,2
+외환,1000_300,all_pos,중,2
+외환,1000_300,all_neg,중,2
