@@ -132,62 +132,62 @@ targets:
     difficulty: 하
     count: 5
 
-  # --- 외환 (FX) ---
-  - category: FX
-    chunking_method: recursive_300_100
-    data_type: pos_neg
-    difficulty: 상
-    count: 1
-  - category: FX
-    chunking_method: recursive_300_100
-    data_type: pos_neg
-    difficulty: 하
-    count: 5
-  - category: FX
-    chunking_method: recursive_600_200
-    data_type: pos_neg
-    difficulty: 상
-    count: 1
-  - category: FX
-    chunking_method: recursive_600_200
-    data_type: pos_neg
-    difficulty: 하
-    count: 5
-  - category: FX
-    chunking_method: recursive_600_200
-    data_type: all_pos
-    difficulty: 중
-    count: 1
-  - category: FX
-    chunking_method: recursive_600_200
-    data_type: all_pos
-    difficulty: 하
-    count: 1
-  - category: FX
-    chunking_method: recursive_600_200
-    data_type: all_neg
-    difficulty: 중
-    count: 2
-  - category: FX
-    chunking_method: recursive_1000_300
-    data_type: pos_neg
-    difficulty: 중
-    count: 3
-  - category: FX
-    chunking_method: recursive_1000_300
-    data_type: all_pos
-    difficulty: 중
-    count: 2
-  - category: FX
-    chunking_method: recursive_1000_300
-    data_type: all_neg
-    difficulty: 중
-    count: 2
-  - category: FX
-    chunking_method: recursive_1000_300
-    data_type: all_neg
-    difficulty: 하
-    count: 3
+  # --- 외환 (FX) --- (260828_문서 수량 부족으로 우선 제외)
+#  - category: FX
+#    chunking_method: recursive_300_100
+#    data_type: pos_neg
+#    difficulty: 상
+#    count: 1
+#  - category: FX
+#    chunking_method: recursive_300_100
+#    data_type: pos_neg
+#    difficulty: 하
+#    count: 5
+#  - category: FX
+#    chunking_method: recursive_600_200
+#    data_type: pos_neg
+#    difficulty: 상
+#    count: 1
+#  - category: FX
+#    chunking_method: recursive_600_200
+#    data_type: pos_neg
+#    difficulty: 하
+#    count: 5
+#  - category: FX
+#    chunking_method: recursive_600_200
+#    data_type: all_pos
+#    difficulty: 중
+#    count: 1
+#  - category: FX
+#    chunking_method: recursive_600_200
+#    data_type: all_pos
+#    difficulty: 하
+#    count: 1
+#  - category: FX
+#    chunking_method: recursive_600_200
+#    data_type: all_neg
+#    difficulty: 중
+#    count: 2
+#  - category: FX
+#    chunking_method: recursive_1000_300
+#    data_type: pos_neg
+#    difficulty: 중
+#    count: 3
+#  - category: FX
+#    chunking_method: recursive_1000_300
+#    data_type: all_pos
+#    difficulty: 중
+#    count: 2
+#  - category: FX
+#    chunking_method: recursive_1000_300
+#    data_type: all_neg
+#    difficulty: 중
+#    count: 2
+#  - category: FX
+#    chunking_method: recursive_1000_300
+#    data_type: all_neg
+#    difficulty: 하
+#    count: 3
 
 
 # ==============================================================================
