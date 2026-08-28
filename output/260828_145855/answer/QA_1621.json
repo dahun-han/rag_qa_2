@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1621",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "용돈관리 PONEY 적금 안내의 유효기간이 언제까지인가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

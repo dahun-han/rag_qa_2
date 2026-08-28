@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2603",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "외환"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "쏠빠른 해외송금을 모바일뱅킹으로 쓰려는데, 제가 미리 등록해둔 수취인 정보로 로그인만 하면 별도 계좌번호 입력 없이 현지에서 현금으로 받는 방식으로 바로 보낼 수 있는지 궁금해요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1620",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "분양자인 제가 은행이 주택자금대출을 해줄 때 어떤 약속을 하게 되는지 좀 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

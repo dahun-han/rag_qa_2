@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2602",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "온라인으로 신용보증을 부탁하는 약정에 함께 보증한 사람이 있는데 제가 어떤 의무를 지는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}
