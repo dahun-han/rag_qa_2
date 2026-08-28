@@ -1,18 +1,153 @@
 # ==============================================================================
 # [생성 모드 1] 타겟 지정 생성 모드 (targets)
-# data/target/taget_count_list.csv 기준 타겟 목록 (총 33건)
+# data/target/target_count_list_2.csv 기준 타겟 목록 (총 28개 항목 / 총 49건)
 # ==============================================================================
 targets:
+  # --- 수신 (DS) ---
+  - category: DS
+    chunking_method: recursive_300_100
+    data_type: all_pos
+    difficulty: 중
+    count: 1
+  - category: DS
+    chunking_method: recursive_300_100
+    data_type: all_neg
+    difficulty: 상
+    count: 2
+  - category: DS
+    chunking_method: recursive_300_100
+    data_type: all_neg
+    difficulty: 중
+    count: 4
+  - category: DS
+    chunking_method: recursive_600_200
+    data_type: pos_neg
+    difficulty: 상
+    count: 2
+  - category: DS
+    chunking_method: recursive_600_200
+    data_type: all_neg
+    difficulty: 중
+    count: 3
+  - category: DS
+    chunking_method: recursive_1000_300
+    data_type: all_neg
+    difficulty: 상
+    count: 1
+  - category: DS
+    chunking_method: recursive_1000_300
+    data_type: all_neg
+    difficulty: 중
+    count: 2
+
+  # --- 여신 (LS) ---
+  - category: LS
+    chunking_method: recursive_300_100
+    data_type: pos_neg
+    difficulty: 상
+    count: 1
+  - category: LS
+    chunking_method: recursive_300_100
+    data_type: all_pos
+    difficulty: 상
+    count: 1
+  - category: LS
+    chunking_method: recursive_300_100
+    data_type: all_neg
+    difficulty: 상
+    count: 1
+  - category: LS
+    chunking_method: recursive_300_100
+    data_type: all_neg
+    difficulty: 중
+    count: 3
+  - category: LS
+    chunking_method: recursive_300_100
+    data_type: all_neg
+    difficulty: 하
+    count: 1
+  - category: LS
+    chunking_method: recursive_600_200
+    data_type: pos_neg
+    difficulty: 상
+    count: 3
+  - category: LS
+    chunking_method: recursive_600_200
+    data_type: all_pos
+    difficulty: 하
+    count: 1
+  - category: LS
+    chunking_method: recursive_600_200
+    data_type: all_neg
+    difficulty: 상
+    count: 2
+  - category: LS
+    chunking_method: recursive_600_200
+    data_type: all_neg
+    difficulty: 중
+    count: 1
+  - category: LS
+    chunking_method: recursive_1000_300
+    data_type: pos_neg
+    difficulty: 상
+    count: 1
+  - category: LS
+    chunking_method: recursive_1000_300
+    data_type: pos_neg
+    difficulty: 중
+    count: 1
+
+  # --- 외환 (FX) ---
+  - category: FX
+    chunking_method: recursive_300_100
+    data_type: pos_neg
+    difficulty: 상
+    count: 1
   - category: FX
     chunking_method: recursive_300_100
     data_type: pos_neg
     difficulty: 하
     count: 1
   - category: FX
+    chunking_method: recursive_300_100
+    data_type: all_neg
+    difficulty: 하
+    count: 1
+  - category: FX
+    chunking_method: recursive_600_200
+    data_type: pos_neg
+    difficulty: 상
+    count: 1
+  - category: FX
+    chunking_method: recursive_600_200
+    data_type: all_pos
+    difficulty: 중
+    count: 1
+  - category: FX
+    chunking_method: recursive_600_200
+    data_type: all_neg
+    difficulty: 중
+    count: 4
+  - category: FX
+    chunking_method: recursive_600_200
+    data_type: all_neg
+    difficulty: 하
+    count: 2
+  - category: FX
+    chunking_method: recursive_1000_300
+    data_type: pos_neg
+    difficulty: 중
+    count: 2
+  - category: FX
     chunking_method: recursive_1000_300
     data_type: all_pos
     difficulty: 중
     count: 2
+  - category: FX
+    chunking_method: recursive_1000_300
+    data_type: all_neg
+    difficulty: 중
+    count: 3
 
 
 # ==============================================================================
