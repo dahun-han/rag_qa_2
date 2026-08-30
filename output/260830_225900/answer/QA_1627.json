@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_1627",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 지금 대출 만기 연장 심사 중인데, 만기 때 적용대상 판정에 관한 내용도 약정서 사본에 포함되어 있나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "약정기간",
+      "value": "만기 시 적용대상 여부를 다시 판정",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "약정기간",
+      "value": "만기시 은행에서 정한 적용대상에 해당하지 않을 경우 본 제도의 지원은 종료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "은행의 의무",
+      "value": "약정서상의 중요한 내용을 설명하여야 하며",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "은행의 의무",
+      "value": "이 약정서의 사본을 교부하여야 합니다",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

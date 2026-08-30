@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_2608",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "온라인 대출 관련 불만을 이메일로 보냈는데 은행이 처리 결과를 알려주지 않아 제가 손해를 보면 은행에 책임을 물을 수 있나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "의견·불만 처리",
+      "value": "게시판을 활용하거나 전자우편 등",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "분쟁 해결 및 책임",
+      "value": "성실히 분쟁 해결에 임하여야 함",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "분쟁 해결 및 책임",
+      "value": "은행 측의 불성실로 이용자에 손해가 발생할 경우 관련 법령에 따라 책임을 부담",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

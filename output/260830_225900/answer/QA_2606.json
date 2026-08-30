@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_2606",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "사망 시 보험금이 남아서 대출잔액을 초과하면 그 초과분은 제 가족이 받는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "보험금 수익자",
+      "value": "채무잔액 이내: 대출기관",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "보험금 수익자",
+      "value": "채무잔액 초과액: 피보험자 (사망하는 경우 피보험자의 법정상속인)",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

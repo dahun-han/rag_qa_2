@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_2618",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "정기적립식과 자유적립식은 입금 시점에 따라 이자 계산 방식이 어떻게 다른가요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "이자 지급",
+      "value": "자유적립식 : 입금건별로 입금일부터 해지일 전일까지 기간(예치일수)에 대하여 이자율로 계산하여 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "이자 지급",
+      "value": "정기적립식 : 월 저축금액을 매월 이 계약에서 정한 날짜에 입금하였을 때에는 입금건별로 입금일부터 해지일 전일까지 기간(예치일수)에 대하여 이자율로 계산하여 지급",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "이자 지급",
+      "value": "정기적립식 : 이 계약에서 정한 날짜보다 빨리 입금하였거나 늦게 입금하였을 때에는 적립식예금약관에서 정한 대로 이자 지급",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

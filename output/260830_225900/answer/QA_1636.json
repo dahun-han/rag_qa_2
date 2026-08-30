@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_1636",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 대여금고에서 도장 확인 없이 계좌이동을 신청했는데 은행이 결과 통보를 안 해줘 요금이 이중 청구됐어요, 이럴 때 손해배상은 어떻게 되는지 궁금해요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대여금고 규정",
+      "value": "별도 신고인감 또는 서명",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "대여금고 규정",
+      "value": "천재지변, 기타 불가항력으로 인해 임차인에게 생긴 손해",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "계좌이동서비스 약관",
+      "value": "고객이 요청하는 경우 계좌이동 신청결과를 사전에 합의한 방법으로 통보",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "계좌이동서비스 약관",
+      "value": "계좌이동서비스 과정에서 발생한 사고로 인하여 고객에게 손해가 발생한 경우 은행의 손해 배상책임",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "계좌이동서비스 약관",
+      "value": "고객의 고의 또는 중과실이 입증되는 경우 책임의 전부 또는 일부를 고객이 부담하게 할 수 있음",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

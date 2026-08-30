@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2616",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 신용보증기금 보증약정에 같이 책임지는 보증인으로 서명하면, 원래 빚진 사람이 갚지 못할 때 제가 바로 대신 갚아야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

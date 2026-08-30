@@ -1,0 +1,70 @@
+{
+  "item_id": "QA_2623",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "부모로서 자녀와 계좌를 공유해 놨는데 자동이체의 출금계좌 변경 신청이 안 될까 걱정돼요, 이런 경우 제가 먼저 확인하거나 조치해야 할 게 뭐죠?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "계좌이동서비스 신청",
+      "value": "계좌이동서비스신청서를 작성하여 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "계좌이동서비스 신청",
+      "value": "은행 영업점, 인터넷뱅킹(모바일뱅킹 포함), 자동이체통합관리시스템(www.payinfo.or.kr), 애플리케이션",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "계좌이동서비스 신청",
+      "value": "변경 전 다른 금융기관에 등록된 자동이체를 해지하고 「변경 후 은행」에 자동이체를 신규 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "처리 소요",
+      "value": "신청일 포함 최대 6영업일",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "처리 소요",
+      "value": "이체일로부터 3영업일 이전",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "SOL패밀리 이용요건",
+      "value": "부 또는 모, 자녀가 모두 SOL패밀리에 등록",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "SOL패밀리 이용요건",
+      "value": "자녀는 만17세 이상 실명의 개인",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "신청결과 통지",
+      "value": "계좌이동 신청결과를 사전에 합의한 방법으로 통보",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

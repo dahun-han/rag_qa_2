@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2627",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 매주 몇 번씩 1억 단위로 입출금하는데 일부 금액이 3일만 머무르면 그 부분만 낮은 이율로 계산되는지 알고 싶어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

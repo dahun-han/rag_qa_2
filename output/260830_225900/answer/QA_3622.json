@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_3622",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "가계대출 6천만 원 받으려고 하는데 고객이 내는 금액과 은행이 부담하는 금액 좀 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "대출금액 구간",
+      "value": "5천만원초과1억원이하",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "비용 부담",
+      "value": "고객 부담 3만 5천원",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "비용 부담",
+      "value": "은행 부담 3만 5천원",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

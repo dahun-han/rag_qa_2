@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1631",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "매일 땡겨드림 대출에서 매일 동일한 금액이 제 계좌로 입금된다는 건 무슨 뜻인가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

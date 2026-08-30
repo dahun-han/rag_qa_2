@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2607",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 생활안정자금으로 받은 주택담보대출이 있는데, 같은 세대에서 다른 집을 추가로 사면 은행에서 어떤 불이익이 생기나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "주택 추가 구입 제한",
+      "value": "대출 실행일부터 전액 상환 전까지 제 2 조 제 2 항에 명시된 주택 등 외에 추가로 주택 구입 금지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "주택 추가 구입 제한",
+      "value": "기한의 이익 상실",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "주택 추가 구입 제한",
+      "value": "즉시 변제 의무",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "신용정보 제공 및 대출 제한",
+      "value": "신용정보 집중기관에 채무자의 약정 위반사실 제공",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "신용정보 제공 및 대출 제한",
+      "value": "제공일로부터 향후 년간 금융기관의 주택 관련 대출 제한",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "세대 구성 변경 신고",
+      "value": "세대주 또는 세대원에 변경이 생긴 때에는 지체없이 그 변경내용을 은행에 신고",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

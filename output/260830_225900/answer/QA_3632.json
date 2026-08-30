@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_3632",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "발행어음에 대해 영업점에 민원 넣었는데 14영업일이 지났는데도 연락이 없어요, 이럴 때 제가 어떻게 해야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "민원 처리 기한",
+      "value": "특별한 사정이 없는 한 14영업일 이내",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "민원 처리 기한",
+      "value": "기한 연장 시 안내",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "문의 경로",
+      "value": "영업점, 고객센터(1577-8000), 인터넷 홈페이지(www.shinhan.com)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "민원 처리 진행상황",
+      "value": "요청이 있는 경우 민원처리 진행상황을 안내 받으실 수 있습니다",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "분쟁조정",
+      "value": "금융감독원(국번없이 1332), 금융소비자보호법 제36조 제1항",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "적용대상",
+      "value": "발행어음",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

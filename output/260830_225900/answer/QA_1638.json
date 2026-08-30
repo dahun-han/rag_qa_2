@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_1638",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 스마트원 카드를 받았더니 계좌가 성립됐고 창구에서 종이통장은 주지 않던데, 이 카드로 타행에 이체하면 수수료는 어떻게 되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "상품",
+      "value": "신한 스마트원 전자통장",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "상품",
+      "value": "신한 스마트원 카드",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "이체 수수료",
+      "value": "당행이체: 무료",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "이체 수수료",
+      "value": "타행이체: 3,000원",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "이체 수수료",
+      "value": "건당징구",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

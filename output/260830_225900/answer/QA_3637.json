@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3637",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "제가 개인사업자인데 Tops 적립예금 SOHO형은 개인사업자도 계약기간 6개월 이상에서 1년 이내로만 가입해야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

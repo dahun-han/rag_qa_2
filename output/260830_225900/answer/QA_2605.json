@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2605",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 전세대출을 받은 상태에서 배우자와 함께 값비싼 아파트를 계약해 집이 하나 더 늘어나면 대출에 어떤 영향이 있나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "기한전의 채무변제의무",
+      "value": "시가 9 억원 초과 주택을 취득",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기한전의 채무변제의무",
+      "value": "2 주택 이상을 취득",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "기한전의 채무변제의무",
+      "value": "본 대출의 기한의 이익 상실",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "기한전의 채무변제의무",
+      "value": "본 대출을 변제할 의무",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "신용정보 및 대출제한",
+      "value": "약정 위반사실이 신용정보 집중기관에 제공",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "신용정보 및 대출제한",
+      "value": "향후 3 년간 금융기관의 주택 관련 대출 제한",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

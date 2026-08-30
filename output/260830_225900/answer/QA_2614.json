@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2614",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "포괄한도 운전자금대출 때문에 보증을 서게 됐는데, 은행이 보증을 해주는 사람과 담보를 내준 사람에게 어떤 서류를 주는지 설명 좀 해주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2626",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "매일 잔액을 기준으로 이자를 계산한다고 들었는데, 월초에 넣는 것과 월말에 넣는 것 중 어느 쪽이 이자 실익이 더 큰지 알려주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

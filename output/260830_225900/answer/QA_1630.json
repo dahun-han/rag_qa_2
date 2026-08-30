@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1630",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 회사 매출채권을 웹으로 담보제공해 대출을 받으려 하는데, 전자결제 관련 약관과 은행의 대출 약관 중 제 거래에 어떤 약관들이 적용되는지 알려주실래요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

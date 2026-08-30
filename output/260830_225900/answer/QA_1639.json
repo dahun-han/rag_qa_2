@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1639",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "스마트원 카드로 통장 대신 사용 중인데, 예금 거래 관련한 건은 별도의 예금 약관을 우선 적용하는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

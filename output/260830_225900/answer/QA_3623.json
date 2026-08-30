@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_3623",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "빠른 빚조정 중인 사람을 보호하려고 빚 팔기를 막는다고 하는데, 그럼 제가 실제로 받는 보호가 뭔지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "법령",
+      "value": "금융위원회고시  제2026-27호",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "양도 제한 대상",
+      "value": "신속채무조정의 합의가 성립된 후 합의의 효력이 상실되지 않은 개인금융채권",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "양도 제한 범위",
+      "value": "대부업 등으로의 양도",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "목적/효과",
+      "value": "신용하락 위험 등의 불이익을 미연에 방지",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "목적/효과",
+      "value": "채무자의 안정적인 신용회복 및 경제적 재기",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3635",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 네이버 계정을 두 개 쓰는데, 네이버페이와 연동되는 신한 통장은 1인당 1계좌라서 제 이름으로는 하나만 만들 수 있는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

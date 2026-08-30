@@ -1,0 +1,77 @@
+{
+  "item_id": "QA_3626",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 가족과 함께 같은 주민등록 세대인데 투기과열지구에서 새 집을 사서 그 집을 담보로 대출을 받았고 기존 집을 2년 안에 못 팔면 어떤 불이익이 생기나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "적용 대상",
+      "value": "세대의 세대주 또는 세대원",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "적용 대상",
+      "value": "투기지역 · 투기과열지구 · 조정대상지역",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "세대 정의",
+      "value": "세대별 주민등록표",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "처분 절차 및 기한",
+      "value": "추가매수대상이 주택일 경우 대출 실행일로부터 2 년 이내",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "기한의 이익 상실",
+      "value": "은행여신거래기본약관 제 7 조 제 4 항 제 2 호",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "기한의 이익 상실",
+      "value": "증빙할 수 있는 자료를 제출하지 않는 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N7",
+      "key": "여신거래 약정위반",
+      "value": "신용정보 집중기관에 채무자의 약정 위반사실이 제공",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N8",
+      "key": "여신거래 약정위반",
+      "value": "향후 3 년간 금융기관의 주택 관련 대출이 제한",
+      "type": "numeric",
+      "vital": true
+    },
+    {
+      "id": "N9",
+      "key": "여신거래 약정위반",
+      "value": "처분 (명의이전 완료) 하지 않은 채 본 대출을 전액 상환하는 경우",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

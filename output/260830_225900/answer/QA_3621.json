@@ -1,0 +1,35 @@
+{
+  "item_id": "QA_3621",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "물건을 납품해서 채권이 확정되면 그 채권까지 은행에 담보로 넘겨지는지 설명 좀 해주세요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "채권양도 통지·효력",
+      "value": "을이 '병'에게 물품 또는 용역을 납품함으로써 구체적으로 발생, 확정된 매출채권을 통보받은 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "채권양도 통지·효력",
+      "value": "'을'을 대리하여 '병'에게 채권양도 통지할 수 있는 권한을 '갑'에게 수여",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "채권양도 통지·효력",
+      "value": "채권양도통지서 원본을 '병'에게 배달증명부 내용증명우편으로 통지하는 것으로 제3자에 대한 대항요건을 갖춘 것으로 봄",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

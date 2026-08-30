@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_1635",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "저축기간이 없는데 5년 지나면 이자가 원금에 더해지지 않는다고 써 있더라고요, 그럼 5년 넘긴 뒤에 입출금하면 이자 정산은 어떻게 되는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "예금 종류",
+      "value": "저축예금, 수퍼저축예금, 신한금융투자 증권거래예금",
+      "type": "enum",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "이자 지급방법",
+      "value": "매월 셋째주 마지막 영업일에 계산하여 그 익일(원가일)에 원금에 더함",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "이자 지급방법",
+      "value": "최종거래일로부터 5년이 경과한 날부터는 이자에 원금을 더하지 않고",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "이자 지급방법",
+      "value": "계좌해지 또는 추가 입출금 거래 발생일에 일괄 계산하여 지급할 수",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

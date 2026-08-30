@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1632",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "보금자리론 연계 대출 약정서 왼쪽 상단에 회사명 적는 칸과 날짜 기입란이 보이는데, 날짜는 보통 어느 칸에 적는지 궁금해요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

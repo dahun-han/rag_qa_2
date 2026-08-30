@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2625",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 개인 명의로 이미 뉴라이프 저축통장 계좌를 하나 갖고 있는데 개인사업자 명의로는 또 가입할 수 있나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

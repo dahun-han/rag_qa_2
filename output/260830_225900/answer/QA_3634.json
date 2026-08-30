@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3634",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "전자채권 결제로 대금을 받을 건데 입금계좌는 은행에 개설된 우리 회사 명의 통장만 지정해야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

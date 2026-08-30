@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_2621",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 거래하는 다른 은행에서 주택청약종합저축을 추가로 만들면 1인 1계좌 규정이 어떻게 적용되나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "가입 제한",
+      "value": "1 인 1 계좌에 한한다.",
+      "type": "bool",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "가입 제한",
+      "value": "국토교통부장관이 해당저축의 취급기관으로 지정하는 은행에서만 가입이 가능하다.",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

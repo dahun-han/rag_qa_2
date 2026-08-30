@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_2613",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "전입 증빙을 못 내 전입 의무를 지키지 못한 상황에 심사평가 점수 미달까지 겹치면 은행이 어떤 조치를 취하나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "심사평가 기준",
+      "value": "일정점수 미달",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "기한 전의 채무변제의무",
+      "value": "전입을 증빙하지 않는 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "기한 전의 채무변제의무",
+      "value": "기한의 이익 상실",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "기한 전의 채무변제의무",
+      "value": "본 대출을 변제할 의무",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "여신거래 약정위반",
+      "value": "약정 위반사실 제공(신용정보 집중기관)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "여신거래 약정위반",
+      "value": "향후 3년간 주택 관련 대출 제한",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "item_id": "QA_2612",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "전세지킴 보증을 받았는데 전대를 하면서 보증 대상에서 빠진 상황이라면, 햇살론 규정에 따라 보증기관이 대신 갚고 나서 어떤 방법으로 제게서 돈을 돌려받는지 설명 좀 부탁드려요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "보증 책임",
+      "value": "임대차목적물을 제3자에게 전대한 경우",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "보증채무 이행 청구",
+      "value": "임대차계약서 원본 제출",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "보증채무 이행 청구",
+      "value": "임대차보증금 반환채권에 대한 채권양도계약 체결",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "대위 및 사전구상",
+      "value": "서금원이 보증채무를 이행한 경우 대위변제자로서 본인이 채권자에게 설정하여 준 담보에 대한 권리 행사",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "대위 및 사전구상",
+      "value": "아래 각 호의 어느 하나에 해당하는 사유가 생긴 경우 서금원이 사전구상",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

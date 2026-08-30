@@ -1,0 +1,42 @@
+{
+  "item_id": "QA_1624",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 버팀목 전세자금 대출을 한 번 연장한 상태인데, 한번 더 연장하면 금리 적용이 어떻게 달라지나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "연장 규정",
+      "value": "2회 연장시부터 일반 버팀목전세자금 금리",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "연장시 적용 기준",
+      "value": "소득은 신규당시 기준",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "연장시 적용 기준",
+      "value": "임차보증금은 연장시 기준",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "연장 규정",
+      "value": "최초 1회 차 연장시 상환 및 금리가산 없이 기한연장",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "item_id": "QA_1625",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "은행이 제 계좌의 돈을 다른 빚 갚는 데 쓴다고 통지했는데 우편이 일반적으로 걸리는 기간이 지나도 제가 못 받았어요, 이럴 때 은행의 조치는 언제부터 인정되는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "통지의 도달시점",
+      "value": "보통의 우송기간이 경과한 때",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "발송의 추정",
+      "value": "사본을 보존하고 그 발신의 사실 및 연월일을 장부에 명백히 기재한 때",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}

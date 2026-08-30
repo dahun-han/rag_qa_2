@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1640",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "normal",
+  "question": "제가 2027년 6월 20일에 쏠편한 정기예금에 가입하면 안내문에 적힌 기간이 이미 지나서 그 안내서는 적용이 안 되는 건가요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "item_id": "QA_1629",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "hard",
+  "question": "약정서에 제가 서명하면 어떤 확인사항들이 인정되는지 궁금해요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "서명·약정서 확인",
+      "value": "약정서설명듣고, 사본받았음(서명/인)",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N2",
+      "key": "권리침해 및 처분 제한",
+      "value": "압류, 가압류, 전부 ･ 추심명령, 채권양도, 금융기관 담보 제공 등 일체의 권리침해 사실이 없음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N3",
+      "key": "권리침해 및 처분 제한",
+      "value": "임대차보증금반환채권을 제3자에게 양도하거나 금융기관 등 에 담보로 제공하지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N4",
+      "key": "법적 책임",
+      "value": "이와 관련한 법적 책임",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N5",
+      "key": "보증책임",
+      "value": "실제 임대차계약기간이 1년 미만인 경우 공사가 보증책임을 부담하지 않음",
+      "type": "text",
+      "vital": true
+    },
+    {
+      "id": "N6",
+      "key": "입주 및 주민등록 증빙",
+      "value": "보증서발급일에 임대차목적물에 입주하여 주민등록을 마친 후 이를 입증하는 서류를 당일에 금융기관에 제출",
+      "type": "text",
+      "vital": true
+    }
+  ]
+}
