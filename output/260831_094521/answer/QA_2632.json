@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2632",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "한 가정에 미성년자가 세 명 있으면 주니어 적금은 총 몇 계좌까지 만들 수 있나요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

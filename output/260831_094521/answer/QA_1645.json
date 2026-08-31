@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_1645",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_300_100",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 개인 인터넷뱅킹으로 접속하면 eFX 서비스 적용 거래에 해당하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

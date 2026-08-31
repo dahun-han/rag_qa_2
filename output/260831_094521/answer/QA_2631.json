@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2631",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 대출 신청하려는데 담보를 다른 사람이 내주면 그 사람한테도 은행이 대출 약관을 설명하고 약정서 사본을 줘야 하나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

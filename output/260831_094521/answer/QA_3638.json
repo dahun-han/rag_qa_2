@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_3638",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_1000_300",
+  "business_domain": [
+    "수신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 16세인데 제 명의로 SOL Plan 포인트박스 예금에 가입할 수 있나요?",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}

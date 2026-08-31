@@ -1,0 +1,21 @@
+{
+  "item_id": "QA_2630",
+  "data_type": "all_neg",
+  "chunking_method": "recursive_600_200",
+  "business_domain": [
+    "여신"
+  ],
+  "persona": "고객",
+  "difficulty": "easy",
+  "question": "제가 법인으로 어린이집으로 쓰는 건물을 갖고 있는데 이게 만기연장 때 보유 주택 수에 포함되는지 잘 모르겠어요",
+  "context": [],
+  "nuggets": [
+    {
+      "id": "N1",
+      "key": "근거 존재 여부",
+      "value": "없음",
+      "type": "bool",
+      "vital": true
+    }
+  ]
+}
